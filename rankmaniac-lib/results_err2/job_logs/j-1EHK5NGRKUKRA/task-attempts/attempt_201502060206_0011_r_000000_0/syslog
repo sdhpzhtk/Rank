@@ -1,0 +1,38 @@
+2015-02-06 02:13:58,031 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=SHUFFLE, sessionId=
+2015-02-06 02:13:58,461 INFO org.apache.hadoop.mapred.ReduceTask (main): Host name: ip-172-31-37-202.us-west-2.compute.internal
+2015-02-06 02:13:58,539 INFO org.apache.hadoop.streaming.PipeMapRed (main): PipeMapRed exec [/mnt/var/lib/hadoop/mapred/taskTracker/jobcache/job_201502060206_0011/attempt_201502060206_0011_r_000000_0/work/./pagerank_reduce.py]
+2015-02-06 02:13:59,244 INFO org.apache.hadoop.mapred.ReduceTask (main): ShuffleRamManager: MemoryLimit=78643200, MaxSingleShuffleLimit=19660800
+2015-02-06 02:13:59,764 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging on-disk files): attempt_201502060206_0011_r_000000_0 Thread started: Thread for merging on-disk files
+2015-02-06 02:13:59,764 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging on-disk files): attempt_201502060206_0011_r_000000_0 Thread waiting: Thread for merging on-disk files
+2015-02-06 02:13:59,766 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0011_r_000000_0 Need another 1 map output(s) where 0 is already in progress
+2015-02-06 02:13:59,768 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0011_r_000000_0: Got 0 new map-outputs & number of known map outputs is 0
+2015-02-06 02:13:59,769 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0011_r_000000_0 Scheduled 0 of 0 known outputs (0 slow hosts and 0 dup hosts)
+2015-02-06 02:13:59,769 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging in memory files): attempt_201502060206_0011_r_000000_0 Thread started: Thread for merging in memory files
+2015-02-06 02:14:04,782 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0011_r_000000_0: Got 1 new map-outputs & number of known map outputs is 1
+2015-02-06 02:14:04,804 INFO org.apache.hadoop.mapred.ReduceTask (MapOutputCopier attempt_201502060206_0011_r_000000_0.0): Shuffling 720447 bytes (720447 raw bytes) into RAM from attempt_201502060206_0011_m_000000_0
+2015-02-06 02:14:04,810 INFO org.apache.hadoop.mapred.ReduceTask (MapOutputCopier attempt_201502060206_0011_r_000000_0.0): Read 720447 bytes from map-output for attempt_201502060206_0011_m_000000_0
+2015-02-06 02:14:04,812 INFO org.apache.hadoop.mapred.ReduceTask (MapOutputCopier attempt_201502060206_0011_r_000000_0.0): Rec #1 from attempt_201502060206_0011_m_000000_0 -> (2, 23) from ip-172-31-37-202.us-west-2.compute.internal
+2015-02-06 02:14:04,813 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0011_r_000000_0 Scheduled 1 of 1 known outputs (0 slow hosts and 0 dup hosts)
+2015-02-06 02:14:04,816 INFO org.apache.hadoop.mapred.ReduceTask (main): Closed ram manager
+2015-02-06 02:14:04,848 INFO org.apache.hadoop.mapred.ReduceTask (main): Interleaved on-disk merge complete: 0 files left.
+2015-02-06 02:14:04,945 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging in memory files): Initiating in-memory merge with 1 segments...
+2015-02-06 02:14:04,949 INFO org.apache.hadoop.mapred.Merger (Thread for merging in memory files): Merging 1 sorted segments
+2015-02-06 02:14:04,950 INFO org.apache.hadoop.mapred.Merger (Thread for merging in memory files): Down to the last merge-pass, with 1 segments left of total size: 720447 bytes
+2015-02-06 02:14:05,053 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging in memory files): attempt_201502060206_0011_r_000000_0 Merge of the 1 files in-memory complete. Local file is /mnt/var/lib/hadoop/mapred/taskTracker/jobcache/job_201502060206_0011/attempt_201502060206_0011_r_000000_0/output/map_0.out of size 720447
+2015-02-06 02:14:05,053 INFO org.apache.hadoop.mapred.ReduceTask (main): In-memory merge complete: 0 files left.
+2015-02-06 02:14:05,054 INFO org.apache.hadoop.mapred.ReduceTask (main): Initiating final on-disk merge with 1 files
+2015-02-06 02:14:05,054 INFO org.apache.hadoop.mapred.Merger (main): Merging 1 sorted segments
+2015-02-06 02:14:05,085 INFO org.apache.hadoop.mapred.Merger (main): Down to the last merge-pass, with 1 segments left of total size: 720447 bytes
+2015-02-06 02:14:07,856 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Creating new file 's3n://cs144students/caltechftw/5/pagerank/part-00000' in S3
+2015-02-06 02:14:07,858 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Outputstream for key 'caltechftw/5/pagerank/part-00000' writing to tempfile '/mnt/var/lib/hadoop/s3/output-5900485116726011041.tmp'
+2015-02-06 02:14:07,864 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=1/0/0 in:0=1/8 [rec/s] out:0=0/8 [rec/s]
+2015-02-06 02:14:07,865 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=10/0/0 in:1=10/8 [rec/s] out:0=0/8 [rec/s]
+2015-02-06 02:14:07,866 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=100/0/0 in:12=100/8 [rec/s] out:0=0/8 [rec/s]
+2015-02-06 02:14:07,874 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=1000/0/0 in:125=1000/8 [rec/s] out:0=0/8 [rec/s]
+2015-02-06 02:14:07,923 INFO org.apache.hadoop.streaming.PipeMapRed (Thread-31): Records R/W=5150/1
+2015-02-06 02:14:07,981 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=10000/66/0 in:1250=10000/8 [rec/s] out:8=66/8 [rec/s]
+2015-02-06 02:14:08,301 INFO org.apache.hadoop.streaming.PipeMapRed (Thread-5): MRErrorThread done
+2015-02-06 02:14:08,337 INFO org.apache.hadoop.streaming.PipeMapRed (main): mapRedFinished
+2015-02-06 02:14:08,338 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Outputstream for key 'caltechftw/5/pagerank/part-00000' is being closed, beginning upload.
+2015-02-06 02:14:09,032 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Outputstream for key 'caltechftw/5/pagerank/part-00000' upload complete
+2015-02-06 02:14:10,141 INFO org.apache.hadoop.mapred.TaskRunner (main): Task 'attempt_201502060206_0011_r_000000_0' done.

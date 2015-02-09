@@ -1,0 +1,5 @@
+2015-02-06 03:00:06,444 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 0%
+2015-02-06 03:00:14,501 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 98%
+2015-02-06 03:00:15,847 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 100%
+2015-02-06 03:00:15,849 INFO org.apache.hadoop.streaming.StreamJob (main): Job complete: job_201502060254_0009
+2015-02-06 03:00:15,849 INFO org.apache.hadoop.streaming.StreamJob (main): Output: s3n://cs144students/caltechftw/4/pagerank/

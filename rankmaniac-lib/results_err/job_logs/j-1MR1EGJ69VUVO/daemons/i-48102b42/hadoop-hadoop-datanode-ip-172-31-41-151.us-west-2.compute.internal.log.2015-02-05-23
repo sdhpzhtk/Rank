@@ -1,0 +1,100 @@
+2015-02-05 23:57:00,198 INFO org.apache.hadoop.dfs.DataNode (main): STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting DataNode
+STARTUP_MSG:   host = ip-172-31-41-151.us-west-2.compute.internal/172.31.41.151
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 0.18
+STARTUP_MSG:   build =  -r ; compiled by 'root' on Fri Apr 29 21:39:05 UTC 2011
+************************************************************/
+2015-02-05 23:57:08,658 INFO org.apache.hadoop.dfs.Storage (main): Storage directory /mnt/var/lib/hadoop/dfs is not formatted.
+2015-02-05 23:57:08,659 INFO org.apache.hadoop.dfs.Storage (main): Formatting ...
+2015-02-05 23:57:09,072 INFO org.apache.hadoop.dfs.DataNode (main): Registered FSDatasetStatusMBean
+2015-02-05 23:57:09,075 INFO org.apache.hadoop.dfs.DataNode (main): Opened info server at 9200
+2015-02-05 23:57:09,080 INFO org.apache.hadoop.dfs.DataNode (main): Balancing bandwith is 1048576 bytes/s
+2015-02-05 23:57:14,219 INFO org.mortbay.util.Credential (main): Checking Resource aliases
+2015-02-05 23:57:14,502 INFO org.mortbay.http.HttpServer (main): Version Jetty/5.1.4
+2015-02-05 23:57:14,511 INFO org.mortbay.util.Container (main): Started HttpContext[/static,/static]
+2015-02-05 23:57:14,511 INFO org.mortbay.util.Container (main): Started HttpContext[/logs,/logs]
+2015-02-05 23:57:15,618 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.servlet.WebApplicationHandler@134ce4a
+2015-02-05 23:57:15,886 INFO org.mortbay.util.Container (main): Started WebApplicationContext[/,/]
+2015-02-05 23:57:16,866 INFO org.mortbay.http.SocketListener (main): Started SocketListener on 0.0.0.0:9102
+2015-02-05 23:57:16,866 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.Server@13c7378
+2015-02-05 23:57:16,897 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=DataNode, sessionId=null
+2015-02-05 23:57:22,045 INFO org.apache.hadoop.ipc.metrics.RpcMetrics (main): Initializing RPC Metrics with hostName=DataNode, port=9201
+2015-02-05 23:57:22,050 INFO org.apache.hadoop.ipc.Server (IPC Server Responder): IPC Server Responder: starting
+2015-02-05 23:57:22,106 INFO org.apache.hadoop.ipc.Server (IPC Server handler 0 on 9201): IPC Server handler 0 on 9201: starting
+2015-02-05 23:57:22,107 INFO org.apache.hadoop.ipc.Server (IPC Server handler 1 on 9201): IPC Server handler 1 on 9201: starting
+2015-02-05 23:57:22,107 INFO org.apache.hadoop.dfs.DataNode (main): dnRegistration = DatanodeRegistration(ip-172-31-41-151.us-west-2.compute.internal:9200, storageID=, infoPort=9102, ipcPort=9201)
+2015-02-05 23:57:22,108 INFO org.apache.hadoop.ipc.Server (IPC Server listener on 9201): IPC Server listener on 9201: starting
+2015-02-05 23:57:22,430 INFO org.apache.hadoop.ipc.Server (IPC Server handler 2 on 9201): IPC Server handler 2 on 9201: starting
+2015-02-05 23:57:22,542 INFO org.apache.hadoop.dfs.DataNode (main): New storage id DS-1360894984-172.31.41.151-9200-1423180642486 is assigned to data-node 172.31.41.151:9200
+2015-02-05 23:57:22,543 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201)In DataNode.run, data = FSDataset{dirpath='/mnt/var/lib/hadoop/dfs/current'}
+2015-02-05 23:57:22,543 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): using BLOCKREPORT_INTERVAL of 3600000msec Initial delay: 0msec
+2015-02-05 23:57:23,058 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Starting Periodic block scanner.
+2015-02-05 23:57:25,553 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): BlockReport of 0 blocks got processed in 4 msecs
+2015-02-05 23:57:41,332 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@778255): Receiving block blk_-8062388315856521233_1001 src: /172.31.41.151:60888 dest: /172.31.41.151:9200
+2015-02-05 23:57:41,382 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-8062388315856521233_1001): Received block blk_-8062388315856521233_1001 of size 112974 from /172.31.41.151
+2015-02-05 23:57:41,382 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-8062388315856521233_1001): PacketResponder 0 for block blk_-8062388315856521233_1001 terminating
+2015-02-05 23:57:41,846 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@19a0203): Receiving block blk_2423621804115116319_1002 src: /172.31.41.151:60889 dest: /172.31.41.151:9200
+2015-02-05 23:57:41,855 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_2423621804115116319_1002): Received block blk_2423621804115116319_1002 of size 113 from /172.31.41.151
+2015-02-05 23:57:41,857 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_2423621804115116319_1002): PacketResponder 0 for block blk_2423621804115116319_1002 terminating
+2015-02-05 23:57:42,416 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@e34726): Receiving block blk_5374608915429909671_1003 src: /172.31.41.151:60890 dest: /172.31.41.151:9200
+2015-02-05 23:57:42,420 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_5374608915429909671_1003): Received block blk_5374608915429909671_1003 of size 16627 from /172.31.41.151
+2015-02-05 23:57:42,421 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_5374608915429909671_1003): PacketResponder 0 for block blk_5374608915429909671_1003 terminating
+2015-02-05 23:57:42,610 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@1347124): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_5374608915429909671_1003 to /172.31.41.151
+2015-02-05 23:57:43,093 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@15db13f): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-8062388315856521233_1001 to /172.31.41.151
+2015-02-05 23:57:43,687 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@190ef12): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_2423621804115116319_1002 to /172.31.41.151
+2015-02-05 23:57:51,943 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@126d3df): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_5374608915429909671_1003 to /172.31.41.151
+2015-02-05 23:57:52,449 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@1c783c5): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-8062388315856521233_1001 to /172.31.41.151
+2015-02-05 23:58:19,754 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_-8062388315856521233_1001 file /mnt/var/lib/hadoop/dfs/current/blk_-8062388315856521233
+2015-02-05 23:58:19,754 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_2423621804115116319_1002 file /mnt/var/lib/hadoop/dfs/current/blk_2423621804115116319
+2015-02-05 23:58:19,754 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_5374608915429909671_1003 file /mnt/var/lib/hadoop/dfs/current/blk_5374608915429909671
+2015-02-05 23:58:28,694 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@111ded2): Receiving block blk_7868318978889418444_1004 src: /172.31.41.151:60909 dest: /172.31.41.151:9200
+2015-02-05 23:58:28,701 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_7868318978889418444_1004): Received block blk_7868318978889418444_1004 of size 112974 from /172.31.41.151
+2015-02-05 23:58:28,701 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_7868318978889418444_1004): PacketResponder 0 for block blk_7868318978889418444_1004 terminating
+2015-02-05 23:58:29,789 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@19a37a): Receiving block blk_-1951321937642761843_1005 src: /172.31.41.151:60910 dest: /172.31.41.151:9200
+2015-02-05 23:58:29,816 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-1951321937642761843_1005): Received block blk_-1951321937642761843_1005 of size 125 from /172.31.41.151
+2015-02-05 23:58:29,818 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-1951321937642761843_1005): PacketResponder 0 for block blk_-1951321937642761843_1005 terminating
+2015-02-05 23:58:29,948 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@198defc): Receiving block blk_2229399288498288797_1006 src: /172.31.41.151:60911 dest: /172.31.41.151:9200
+2015-02-05 23:58:29,951 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_2229399288498288797_1006): Received block blk_2229399288498288797_1006 of size 16621 from /172.31.41.151
+2015-02-05 23:58:29,953 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_2229399288498288797_1006): PacketResponder 0 for block blk_2229399288498288797_1006 terminating
+2015-02-05 23:58:30,065 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@943dc4): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_2229399288498288797_1006 to /172.31.41.151
+2015-02-05 23:58:30,302 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@1c7865b): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_7868318978889418444_1004 to /172.31.41.151
+2015-02-05 23:58:30,509 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@d1329): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-1951321937642761843_1005 to /172.31.41.151
+2015-02-05 23:58:32,651 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@23756): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_2229399288498288797_1006 to /172.31.41.151
+2015-02-05 23:58:32,848 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@313170): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_7868318978889418444_1004 to /172.31.41.151
+2015-02-05 23:58:55,853 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_-1951321937642761843_1005 file /mnt/var/lib/hadoop/dfs/current/blk_-1951321937642761843
+2015-02-05 23:58:55,854 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_2229399288498288797_1006 file /mnt/var/lib/hadoop/dfs/current/blk_2229399288498288797
+2015-02-05 23:58:55,854 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_7868318978889418444_1004 file /mnt/var/lib/hadoop/dfs/current/blk_7868318978889418444
+2015-02-05 23:59:04,710 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@c6f734): Receiving block blk_-8565754025778602865_1007 src: /172.31.41.151:60930 dest: /172.31.41.151:9200
+2015-02-05 23:59:04,742 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-8565754025778602865_1007): Received block blk_-8565754025778602865_1007 of size 112974 from /172.31.41.151
+2015-02-05 23:59:04,742 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-8565754025778602865_1007): PacketResponder 0 for block blk_-8565754025778602865_1007 terminating
+2015-02-05 23:59:06,049 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@118223d): Receiving block blk_3700672909643232862_1008 src: /172.31.41.151:60931 dest: /172.31.41.151:9200
+2015-02-05 23:59:06,054 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_3700672909643232862_1008): Received block blk_3700672909643232862_1008 of size 124 from /172.31.41.151
+2015-02-05 23:59:06,057 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_3700672909643232862_1008): PacketResponder 0 for block blk_3700672909643232862_1008 terminating
+2015-02-05 23:59:06,226 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@144b18f): Receiving block blk_-4527551658589242164_1009 src: /172.31.41.151:60932 dest: /172.31.41.151:9200
+2015-02-05 23:59:06,230 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-4527551658589242164_1009): Received block blk_-4527551658589242164_1009 of size 16627 from /172.31.41.151
+2015-02-05 23:59:06,268 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-4527551658589242164_1009): PacketResponder 0 for block blk_-4527551658589242164_1009 terminating
+2015-02-05 23:59:06,369 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@106daba): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-4527551658589242164_1009 to /172.31.41.151
+2015-02-05 23:59:06,825 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@c06258): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-8565754025778602865_1007 to /172.31.41.151
+2015-02-05 23:59:06,997 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@10dc656): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_3700672909643232862_1008 to /172.31.41.151
+2015-02-05 23:59:12,184 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@13d9460): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-4527551658589242164_1009 to /172.31.41.151
+2015-02-05 23:59:12,205 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@8b567c): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-8565754025778602865_1007 to /172.31.41.151
+2015-02-05 23:59:31,922 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_-8565754025778602865_1007 file /mnt/var/lib/hadoop/dfs/current/blk_-8565754025778602865
+2015-02-05 23:59:31,923 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_-4527551658589242164_1009 file /mnt/var/lib/hadoop/dfs/current/blk_-4527551658589242164
+2015-02-05 23:59:31,923 INFO org.apache.hadoop.dfs.DataNode (DataNode: [/mnt/var/lib/hadoop/dfs]): Deleting block blk_3700672909643232862_1008 file /mnt/var/lib/hadoop/dfs/current/blk_3700672909643232862
+2015-02-05 23:59:41,541 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@1f82ab4): Receiving block blk_-4852727393877469405_1010 src: /172.31.41.151:60951 dest: /172.31.41.151:9200
+2015-02-05 23:59:41,549 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-4852727393877469405_1010): Received block blk_-4852727393877469405_1010 of size 112974 from /172.31.41.151
+2015-02-05 23:59:41,551 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-4852727393877469405_1010): PacketResponder 0 for block blk_-4852727393877469405_1010 terminating
+2015-02-05 23:59:42,705 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@1d9e2c7): Receiving block blk_3866551768837356889_1011 src: /172.31.41.151:60952 dest: /172.31.41.151:9200
+2015-02-05 23:59:42,707 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_3866551768837356889_1011): Received block blk_3866551768837356889_1011 of size 125 from /172.31.41.151
+2015-02-05 23:59:42,709 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_3866551768837356889_1011): PacketResponder 0 for block blk_3866551768837356889_1011 terminating
+2015-02-05 23:59:42,824 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@17b40fe): Receiving block blk_-8739662181364307024_1012 src: /172.31.41.151:60953 dest: /172.31.41.151:9200
+2015-02-05 23:59:42,827 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-8739662181364307024_1012): Received block blk_-8739662181364307024_1012 of size 16621 from /172.31.41.151
+2015-02-05 23:59:42,828 INFO org.apache.hadoop.dfs.DataNode (PacketResponder 0 for Block blk_-8739662181364307024_1012): PacketResponder 0 for block blk_-8739662181364307024_1012 terminating
+2015-02-05 23:59:43,125 INFO org.apache.hadoop.dfs.DataBlockScanner (org.apache.hadoop.dfs.DataBlockScanner@1236cd5): Verification succeeded for blk_-4852727393877469405_1010
+2015-02-05 23:59:43,356 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@1f9338f): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-8739662181364307024_1012 to /172.31.41.151
+2015-02-05 23:59:43,551 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@e90943): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-4852727393877469405_1010 to /172.31.41.151
+2015-02-05 23:59:43,638 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@2a6ff): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_3866551768837356889_1011 to /172.31.41.151
+2015-02-05 23:59:48,122 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@155d3a3): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-8739662181364307024_1012 to /172.31.41.151
+2015-02-05 23:59:48,646 INFO org.apache.hadoop.dfs.DataNode (org.apache.hadoop.dfs.DataNode$DataXceiver@7b4703): DatanodeRegistration(172.31.41.151:9200, storageID=DS-1360894984-172.31.41.151-9200-1423180642486, infoPort=9102, ipcPort=9201) Served block blk_-4852727393877469405_1010 to /172.31.41.151

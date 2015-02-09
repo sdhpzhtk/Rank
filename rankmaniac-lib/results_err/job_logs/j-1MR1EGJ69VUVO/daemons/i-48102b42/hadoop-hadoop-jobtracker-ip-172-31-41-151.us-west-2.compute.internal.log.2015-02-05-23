@@ -1,0 +1,101 @@
+2015-02-05 23:57:08,921 INFO org.apache.hadoop.mapred.JobTracker (main): STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting JobTracker
+STARTUP_MSG:   host = ip-172-31-41-151.us-west-2.compute.internal/172.31.41.151
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 0.18
+STARTUP_MSG:   build =  -r ; compiled by 'root' on Fri Apr 29 21:39:05 UTC 2011
+************************************************************/
+2015-02-05 23:57:09,697 INFO org.apache.hadoop.ipc.metrics.RpcMetrics (main): Initializing RPC Metrics with hostName=JobTracker, port=9001
+2015-02-05 23:57:09,819 INFO org.apache.hadoop.ipc.Server (IPC Server Responder): IPC Server Responder: starting
+2015-02-05 23:57:09,821 INFO org.apache.hadoop.ipc.Server (IPC Server listener on 9001): IPC Server listener on 9001: starting
+2015-02-05 23:57:09,822 INFO org.apache.hadoop.ipc.Server (IPC Server handler 0 on 9001): IPC Server handler 0 on 9001: starting
+2015-02-05 23:57:09,822 INFO org.apache.hadoop.ipc.Server (IPC Server handler 1 on 9001): IPC Server handler 1 on 9001: starting
+2015-02-05 23:57:09,823 INFO org.apache.hadoop.ipc.Server (IPC Server handler 2 on 9001): IPC Server handler 2 on 9001: starting
+2015-02-05 23:57:09,823 INFO org.apache.hadoop.ipc.Server (IPC Server handler 3 on 9001): IPC Server handler 3 on 9001: starting
+2015-02-05 23:57:09,848 INFO org.apache.hadoop.ipc.Server (IPC Server handler 4 on 9001): IPC Server handler 4 on 9001: starting
+2015-02-05 23:57:09,848 INFO org.apache.hadoop.ipc.Server (IPC Server handler 5 on 9001): IPC Server handler 5 on 9001: starting
+2015-02-05 23:57:09,848 INFO org.apache.hadoop.ipc.Server (IPC Server handler 6 on 9001): IPC Server handler 6 on 9001: starting
+2015-02-05 23:57:09,849 INFO org.apache.hadoop.ipc.Server (IPC Server handler 7 on 9001): IPC Server handler 7 on 9001: starting
+2015-02-05 23:57:09,849 INFO org.apache.hadoop.ipc.Server (IPC Server handler 8 on 9001): IPC Server handler 8 on 9001: starting
+2015-02-05 23:57:09,849 INFO org.apache.hadoop.ipc.Server (IPC Server handler 9 on 9001): IPC Server handler 9 on 9001: starting
+2015-02-05 23:57:09,849 INFO org.apache.hadoop.ipc.Server (IPC Server handler 10 on 9001): IPC Server handler 10 on 9001: starting
+2015-02-05 23:57:09,850 INFO org.apache.hadoop.ipc.Server (IPC Server handler 11 on 9001): IPC Server handler 11 on 9001: starting
+2015-02-05 23:57:09,862 INFO org.apache.hadoop.ipc.Server (IPC Server handler 12 on 9001): IPC Server handler 12 on 9001: starting
+2015-02-05 23:57:09,863 INFO org.apache.hadoop.ipc.Server (IPC Server handler 14 on 9001): IPC Server handler 14 on 9001: starting
+2015-02-05 23:57:09,863 INFO org.apache.hadoop.ipc.Server (IPC Server handler 15 on 9001): IPC Server handler 15 on 9001: starting
+2015-02-05 23:57:09,864 INFO org.apache.hadoop.ipc.Server (IPC Server handler 17 on 9001): IPC Server handler 17 on 9001: starting
+2015-02-05 23:57:09,864 INFO org.apache.hadoop.ipc.Server (IPC Server handler 18 on 9001): IPC Server handler 18 on 9001: starting
+2015-02-05 23:57:09,865 INFO org.apache.hadoop.ipc.Server (IPC Server handler 13 on 9001): IPC Server handler 13 on 9001: starting
+2015-02-05 23:57:09,865 INFO org.apache.hadoop.ipc.Server (IPC Server handler 19 on 9001): IPC Server handler 19 on 9001: starting
+2015-02-05 23:57:09,865 INFO org.apache.hadoop.ipc.Server (IPC Server handler 16 on 9001): IPC Server handler 16 on 9001: starting
+2015-02-05 23:57:10,605 INFO org.apache.hadoop.net.NetworkTopology (IPC Server handler 4 on 9001): Adding a new node: /default-rack/ip-172-31-41-151.us-west-2.compute.internal
+2015-02-05 23:57:15,506 INFO org.mortbay.util.Credential (main): Checking Resource aliases
+2015-02-05 23:57:16,857 INFO org.mortbay.http.HttpServer (main): Version Jetty/5.1.4
+2015-02-05 23:57:16,858 INFO org.mortbay.util.Container (main): Started HttpContext[/static,/static]
+2015-02-05 23:57:16,858 INFO org.mortbay.util.Container (main): Started HttpContext[/logs,/logs]
+2015-02-05 23:57:18,448 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.servlet.WebApplicationHandler@1ba94d
+2015-02-05 23:57:18,587 INFO org.mortbay.util.Container (main): Started WebApplicationContext[/,/]
+2015-02-05 23:57:18,627 INFO org.mortbay.http.SocketListener (main): Started SocketListener on 0.0.0.0:9100
+2015-02-05 23:57:18,627 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.Server@1e228bc
+2015-02-05 23:57:18,629 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=JobTracker, sessionId=
+2015-02-05 23:57:18,635 INFO org.apache.hadoop.mapred.JobTracker (main): JobTracker up at: 9001
+2015-02-05 23:57:18,635 INFO org.apache.hadoop.mapred.JobTracker (main): JobTracker webserver: 9100
+2015-02-05 23:57:19,211 INFO org.apache.hadoop.mapred.JobTracker (main): Starting RUNNING
+2015-02-05 23:57:43,698 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): Split info for job:job_201502052357_0001
+2015-02-05 23:57:43,699 INFO org.apache.hadoop.net.NetworkTopology (initJobs): Adding a new node: /default-rack/localhost
+2015-02-05 23:57:43,699 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): tip:task_201502052357_0001_m_000000 has split on node:/default-rack/localhost
+2015-02-05 23:57:48,512 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/0' in S3
+2015-02-05 23:57:48,867 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/0/pagerank' in S3
+2015-02-05 23:57:49,272 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/0/pagerank/_temporary' in S3
+2015-02-05 23:57:51,347 INFO org.apache.hadoop.mapred.JobInProgress (IPC Server handler 7 on 9001): Choosing rack-local task task_201502052357_0001_m_000000
+2015-02-05 23:57:51,440 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 7 on 9001): Adding task 'attempt_201502052357_0001_m_000000_0' to tip task_201502052357_0001_m_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:57:57,349 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 7 on 9001): Adding task 'attempt_201502052357_0001_r_000000_0' to tip task_201502052357_0001_r_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:58:07,536 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:58:07,537 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0001_m_000000_0' has completed task_201502052357_0001_m_000000 successfully.
+2015-02-05 23:58:16,234 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:58:16,234 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0001_r_000000_0' has completed task_201502052357_0001_r_000000 successfully.
+2015-02-05 23:58:17,083 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Task Commit Thread): Deleting directory 's3n://cs144students/caltechftw/0/pagerank/_temporary'
+2015-02-05 23:58:17,268 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Job job_201502052357_0001 has completed successfully.
+2015-02-05 23:58:17,543 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 13 on 9001): Removed completed task 'attempt_201502052357_0001_m_000000_0' from 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:58:17,543 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 13 on 9001): Removed completed task 'attempt_201502052357_0001_r_000000_0' from 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:58:30,504 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): Split info for job:job_201502052357_0002
+2015-02-05 23:58:30,504 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): tip:task_201502052357_0002_m_000000 has split on node:/default-rack/localhost
+2015-02-05 23:58:31,460 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/0/process' in S3
+2015-02-05 23:58:31,812 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/0/process/_temporary' in S3
+2015-02-05 23:58:32,588 INFO org.apache.hadoop.mapred.JobInProgress (IPC Server handler 4 on 9001): Choosing rack-local task task_201502052357_0002_m_000000
+2015-02-05 23:58:32,588 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 4 on 9001): Adding task 'attempt_201502052357_0002_m_000000_0' to tip task_201502052357_0002_m_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:58:36,452 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 15 on 9001): Adding task 'attempt_201502052357_0002_r_000000_0' to tip task_201502052357_0002_r_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:58:42,723 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:58:42,723 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0002_m_000000_0' has completed task_201502052357_0002_m_000000 successfully.
+2015-02-05 23:58:51,991 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:58:51,991 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0002_r_000000_0' has completed task_201502052357_0002_r_000000 successfully.
+2015-02-05 23:58:52,649 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Task Commit Thread): Deleting directory 's3n://cs144students/caltechftw/0/process/_temporary'
+2015-02-05 23:58:52,808 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Job job_201502052357_0002 has completed successfully.
+2015-02-05 23:58:52,810 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 10 on 9001): Removed completed task 'attempt_201502052357_0002_m_000000_0' from 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:58:52,810 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 10 on 9001): Removed completed task 'attempt_201502052357_0002_r_000000_0' from 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:06,994 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): Split info for job:job_201502052357_0003
+2015-02-05 23:59:06,994 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): tip:task_201502052357_0003_m_000000 has split on node:/default-rack/localhost
+2015-02-05 23:59:08,043 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/1' in S3
+2015-02-05 23:59:08,719 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/1/pagerank' in S3
+2015-02-05 23:59:09,147 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/1/pagerank/_temporary' in S3
+2015-02-05 23:59:12,039 INFO org.apache.hadoop.mapred.JobInProgress (IPC Server handler 2 on 9001): Choosing rack-local task task_201502052357_0003_m_000000
+2015-02-05 23:59:12,039 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 2 on 9001): Adding task 'attempt_201502052357_0003_m_000000_0' to tip task_201502052357_0003_m_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:12,836 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 16 on 9001): Adding task 'attempt_201502052357_0003_r_000000_0' to tip task_201502052357_0003_r_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:22,345 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:59:22,346 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0003_m_000000_0' has completed task_201502052357_0003_m_000000 successfully.
+2015-02-05 23:59:29,181 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:59:29,181 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0003_r_000000_0' has completed task_201502052357_0003_r_000000 successfully.
+2015-02-05 23:59:29,868 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Task Commit Thread): Deleting directory 's3n://cs144students/caltechftw/1/pagerank/_temporary'
+2015-02-05 23:59:30,088 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Job job_201502052357_0003 has completed successfully.
+2015-02-05 23:59:33,038 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 1 on 9001): Removed completed task 'attempt_201502052357_0003_m_000000_0' from 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:33,038 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 1 on 9001): Removed completed task 'attempt_201502052357_0003_r_000000_0' from 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:43,636 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): Split info for job:job_201502052357_0004
+2015-02-05 23:59:43,636 INFO org.apache.hadoop.mapred.JobInProgress (initJobs): tip:task_201502052357_0004_m_000000 has split on node:/default-rack/localhost
+2015-02-05 23:59:44,547 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/1/process' in S3
+2015-02-05 23:59:44,898 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (initJobs): Making dir 's3n://cs144students/caltechftw/1/process/_temporary' in S3
+2015-02-05 23:59:48,057 INFO org.apache.hadoop.mapred.JobInProgress (IPC Server handler 2 on 9001): Choosing rack-local task task_201502052357_0004_m_000000
+2015-02-05 23:59:48,058 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 2 on 9001): Adding task 'attempt_201502052357_0004_m_000000_0' to tip task_201502052357_0004_m_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:49,214 INFO org.apache.hadoop.mapred.JobTracker (IPC Server handler 5 on 9001): Adding task 'attempt_201502052357_0004_r_000000_0' to tip task_201502052357_0004_r_000000, for tracker 'tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195'
+2015-02-05 23:59:57,560 INFO org.apache.hadoop.mapred.TaskRunner (Task Commit Thread): Wrote directly to output, no need to promote temporary directory.
+2015-02-05 23:59:57,560 INFO org.apache.hadoop.mapred.JobInProgress (Task Commit Thread): Task 'attempt_201502052357_0004_m_000000_0' has completed task_201502052357_0004_m_000000 successfully.

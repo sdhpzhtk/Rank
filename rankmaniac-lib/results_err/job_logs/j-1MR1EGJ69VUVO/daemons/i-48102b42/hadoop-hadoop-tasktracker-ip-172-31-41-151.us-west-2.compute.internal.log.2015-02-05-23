@@ -1,0 +1,78 @@
+2015-02-05 23:56:55,253 INFO org.apache.hadoop.mapred.TaskTracker (main): STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting TaskTracker
+STARTUP_MSG:   host = ip-172-31-41-151.us-west-2.compute.internal/172.31.41.151
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 0.18
+STARTUP_MSG:   build =  -r ; compiled by 'root' on Fri Apr 29 21:39:05 UTC 2011
+************************************************************/
+2015-02-05 23:57:01,429 INFO org.mortbay.util.Credential (main): Checking Resource aliases
+2015-02-05 23:57:02,024 INFO org.mortbay.http.HttpServer (main): Version Jetty/5.1.4
+2015-02-05 23:57:02,026 INFO org.mortbay.util.Container (main): Started HttpContext[/static,/static]
+2015-02-05 23:57:02,026 INFO org.mortbay.util.Container (main): Started HttpContext[/logs,/logs]
+2015-02-05 23:57:03,707 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.servlet.WebApplicationHandler@13f210f
+2015-02-05 23:57:03,880 INFO org.mortbay.util.Container (main): Started WebApplicationContext[/,/]
+2015-02-05 23:57:03,989 INFO org.mortbay.http.SocketListener (main): Started SocketListener on 0.0.0.0:9103
+2015-02-05 23:57:03,989 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.Server@110fe28
+2015-02-05 23:57:03,998 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=TaskTracker, sessionId=
+2015-02-05 23:57:04,077 INFO org.apache.hadoop.ipc.metrics.RpcMetrics (main): Initializing RPC Metrics with hostName=TaskTracker, port=56195
+2015-02-05 23:57:04,230 INFO org.apache.hadoop.ipc.Server (IPC Server Responder): IPC Server Responder: starting
+2015-02-05 23:57:06,664 INFO org.apache.hadoop.mapred.TaskTracker (main): TaskTracker up at: localhost.localdomain/127.0.0.1:56195
+2015-02-05 23:57:06,664 INFO org.apache.hadoop.mapred.TaskTracker (main): Starting tracker tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195
+2015-02-05 23:57:07,341 INFO org.apache.hadoop.ipc.Server (IPC Server handler 1 on 56195): IPC Server handler 1 on 56195: starting
+2015-02-05 23:57:06,635 INFO org.apache.hadoop.ipc.Server (IPC Server handler 0 on 56195): IPC Server handler 0 on 56195: starting
+2015-02-05 23:57:06,668 INFO org.apache.hadoop.ipc.Server (IPC Server listener on 56195): IPC Server listener on 56195: starting
+2015-02-05 23:57:08,467 INFO org.apache.hadoop.ipc.Client (main): Retrying connect to server: ip-172-31-41-151.us-west-2.compute.internal/172.31.41.151:9001. Already tried 0 time(s).
+2015-02-05 23:57:09,471 INFO org.apache.hadoop.ipc.Client (main): Retrying connect to server: ip-172-31-41-151.us-west-2.compute.internal/172.31.41.151:9001. Already tried 1 time(s).
+2015-02-05 23:57:10,472 INFO org.apache.hadoop.ipc.Client (main): Retrying connect to server: ip-172-31-41-151.us-west-2.compute.internal/172.31.41.151:9001. Already tried 2 time(s).
+2015-02-05 23:57:10,574 INFO org.apache.hadoop.mapred.TaskTracker (Map-events fetcher for all reduce tasks on tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195): Starting thread: Map-events fetcher for all reduce tasks on tracker_ip-172-31-41-151.us-west-2.compute.internal:localhost.localdomain/127.0.0.1:56195
+2015-02-05 23:57:51,538 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0001_m_000000_0
+2015-02-05 23:57:57,366 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0001_r_000000_0
+2015-02-05 23:57:57,813 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Thread-24): Opening '/caltechftw/pagerank_map.py' for reading
+2015-02-05 23:57:58,443 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Thread-24): Opening '/caltechftw/pagerank_reduce.py' for reading
+2015-02-05 23:58:06,076 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0001_m_000000_0 1.0% Records R/W=1000/1
+2015-02-05 23:58:07,391 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): Task attempt_201502052357_0001_m_000000_0 is done.
+2015-02-05 23:58:09,366 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0001_r_000000_0 0.0% reduce > copy > 
+2015-02-05 23:58:09,521 INFO org.apache.hadoop.mapred.TaskTracker (SocketListener0-0): Sent out 706340 bytes for reduce: 0 from map: attempt_201502052357_0001_m_000000_0 given 706340/706340 from 0 with (2, 18)
+2015-02-05 23:58:12,337 INFO org.apache.hadoop.mapred.TaskTracker (main): Got heartbeatResponse from JobTracker with responseId: 21 and 0 actions
+2015-02-05 23:58:14,470 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0001_r_000000_0 0.97508144% Records R/W=5221/1 > reduce
+2015-02-05 23:58:15,376 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0001_r_000000_0 0.97508144% Records R/W=5221/1 > reduce
+2015-02-05 23:58:15,542 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): Task attempt_201502052357_0001_r_000000_0 is done.
+2015-02-05 23:58:17,544 INFO org.apache.hadoop.mapred.TaskTracker (taskCleanup): Received 'KillJobAction' for job: job_201502052357_0001
+2015-02-05 23:58:17,545 INFO org.apache.hadoop.mapred.TaskRunner (taskCleanup): attempt_201502052357_0001_m_000000_0 done; removing files.
+2015-02-05 23:58:17,547 INFO org.apache.hadoop.mapred.TaskRunner (taskCleanup): attempt_201502052357_0001_r_000000_0 done; removing files.
+2015-02-05 23:58:32,590 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0002_m_000000_0
+2015-02-05 23:58:33,833 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Thread-40): Opening '/caltechftw/process_map.py' for reading
+2015-02-05 23:58:34,584 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (Thread-40): Opening '/caltechftw/process_reduce.py' for reading
+2015-02-05 23:58:36,490 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0002_r_000000_0
+2015-02-05 23:58:41,339 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0002_m_000000_0 1.0% Records R/W=914/1
+2015-02-05 23:58:42,522 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0002_m_000000_0 1.0% Records R/W=914/1
+2015-02-05 23:58:42,532 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): Task attempt_201502052357_0002_m_000000_0 is done.
+2015-02-05 23:58:45,951 INFO org.apache.hadoop.mapred.TaskTracker (SocketListener0-0): Sent out 147787 bytes for reduce: 0 from map: attempt_201502052357_0002_m_000000_0 given 147787/147787 from 0 with (23, 644)
+2015-02-05 23:58:46,874 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0002_r_000000_0 0.0% reduce > copy > 
+2015-02-05 23:58:49,917 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0002_r_000000_0 0.9945507% Records R/W=793/1 > reduce
+2015-02-05 23:58:50,563 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0002_r_000000_0 0.9945507% Records R/W=793/1 > reduce
+2015-02-05 23:58:51,546 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): Task attempt_201502052357_0002_r_000000_0 is done.
+2015-02-05 23:58:52,810 INFO org.apache.hadoop.mapred.TaskTracker (taskCleanup): Received 'KillJobAction' for job: job_201502052357_0002
+2015-02-05 23:58:52,811 INFO org.apache.hadoop.mapred.TaskRunner (taskCleanup): attempt_201502052357_0002_r_000000_0 done; removing files.
+2015-02-05 23:58:52,812 INFO org.apache.hadoop.mapred.TaskRunner (taskCleanup): attempt_201502052357_0002_m_000000_0 done; removing files.
+2015-02-05 23:59:12,041 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0003_m_000000_0
+2015-02-05 23:59:12,838 INFO org.apache.hadoop.mapred.TaskTracker (main): Got heartbeatResponse from JobTracker with responseId: 46 and 1 actions
+2015-02-05 23:59:12,839 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0003_r_000000_0
+2015-02-05 23:59:20,212 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0003_m_000000_0 1.0% Records R/W=825/1
+2015-02-05 23:59:21,698 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): Task attempt_201502052357_0003_m_000000_0 is done.
+2015-02-05 23:59:21,873 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0003_m_000000_0 1.0% Records R/W=825/1
+2015-02-05 23:59:21,873 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0003_m_000000_0 Ignoring status-update since task is 'done'
+2015-02-05 23:59:23,367 INFO org.apache.hadoop.mapred.TaskTracker (SocketListener0-0): Sent out 720447 bytes for reduce: 0 from map: attempt_201502052357_0003_m_000000_0 given 720447/720447 from 0 with (2, 18)
+2015-02-05 23:59:24,800 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0003_r_000000_0 0.6666667% reduce > reduce
+2015-02-05 23:59:27,353 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): attempt_201502052357_0003_r_000000_0 0.9755439% Records R/W=5150/1 > reduce
+2015-02-05 23:59:27,804 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0003_r_000000_0 0.9755439% Records R/W=5150/1 > reduce
+2015-02-05 23:59:28,333 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): Task attempt_201502052357_0003_r_000000_0 is done.
+2015-02-05 23:59:33,038 INFO org.apache.hadoop.mapred.TaskTracker (taskCleanup): Received 'KillJobAction' for job: job_201502052357_0003
+2015-02-05 23:59:33,039 INFO org.apache.hadoop.mapred.TaskRunner (taskCleanup): attempt_201502052357_0003_m_000000_0 done; removing files.
+2015-02-05 23:59:33,040 INFO org.apache.hadoop.mapred.TaskRunner (taskCleanup): attempt_201502052357_0003_r_000000_0 done; removing files.
+2015-02-05 23:59:48,059 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0004_m_000000_0
+2015-02-05 23:59:49,216 INFO org.apache.hadoop.mapred.TaskTracker (main): LaunchTaskAction: attempt_201502052357_0004_r_000000_0
+2015-02-05 23:59:55,842 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 0 on 56195): attempt_201502052357_0004_m_000000_0 1.0% Records R/W=1000/1
+2015-02-05 23:59:57,143 INFO org.apache.hadoop.mapred.TaskTracker (IPC Server handler 1 on 56195): Task attempt_201502052357_0004_m_000000_0 is done.
+2015-02-05 23:59:59,279 INFO org.apache.hadoop.mapred.TaskTracker (SocketListener0-0): Sent out 161893 bytes for reduce: 0 from map: attempt_201502052357_0004_m_000000_0 given 161893/161893 from 0 with (23, 824)

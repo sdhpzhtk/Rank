@@ -1,0 +1,21 @@
+2015-02-05 23:59:14,629 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=MAP, sessionId=
+2015-02-05 23:59:15,165 INFO org.apache.hadoop.mapred.MapTask (main): Host name: ip-172-31-41-151.us-west-2.compute.internal
+2015-02-05 23:59:15,415 INFO org.apache.hadoop.mapred.MapTask (main): numReduceTasks: 1
+2015-02-05 23:59:15,433 INFO org.apache.hadoop.mapred.MapTask (main): io.sort.mb = 150
+2015-02-05 23:59:16,677 INFO org.apache.hadoop.mapred.MapTask (main): data buffer = 119537664/149422080
+2015-02-05 23:59:16,677 INFO org.apache.hadoop.mapred.MapTask (main): record buffer = 393216/491520
+2015-02-05 23:59:18,975 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Opening 's3n://cs144students/caltechftw/0/process/part-00000' for reading
+2015-02-05 23:59:19,192 INFO org.apache.hadoop.streaming.PipeMapRed (main): PipeMapRed exec [/mnt/var/lib/hadoop/mapred/taskTracker/jobcache/job_201502052357_0003/attempt_201502052357_0003_m_000000_0/work/./pagerank_map.py]
+2015-02-05 23:59:19,286 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+2015-02-05 23:59:19,288 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=10/0/0 in:NA [rec/s] out:NA [rec/s]
+2015-02-05 23:59:19,331 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=100/0/0 in:NA [rec/s] out:NA [rec/s]
+2015-02-05 23:59:19,474 INFO org.apache.hadoop.streaming.PipeMapRed (Thread-7): Records R/W=825/1
+2015-02-05 23:59:19,705 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=1000/13429/0 in:NA [rec/s] out:NA [rec/s]
+2015-02-05 23:59:19,910 INFO org.apache.hadoop.streaming.PipeMapRed (Thread-6): MRErrorThread done
+2015-02-05 23:59:19,911 INFO org.apache.hadoop.streaming.PipeMapRed (main): mapRedFinished
+2015-02-05 23:59:19,911 INFO org.apache.hadoop.mapred.MapTask (main): Starting flush of map output
+2015-02-05 23:59:19,911 INFO org.apache.hadoop.mapred.MapTask (main): bufstart = 0; bufend = 667589; bufvoid = 149422080
+2015-02-05 23:59:19,911 INFO org.apache.hadoop.mapred.MapTask (main): kvstart = 0; kvend = 26232; length = 491520
+2015-02-05 23:59:20,202 INFO org.apache.hadoop.mapred.MapTask (main): Index: (0, 720447, 720447)
+2015-02-05 23:59:20,202 INFO org.apache.hadoop.mapred.MapTask (main): Finished spill 0
+2015-02-05 23:59:21,698 INFO org.apache.hadoop.mapred.TaskRunner (main): Task 'attempt_201502052357_0003_m_000000_0' done.

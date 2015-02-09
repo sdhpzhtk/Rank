@@ -1,0 +1,18 @@
+2015-02-05 23:21:34,383 WARN org.apache.hadoop.mapred.JobClient (main): Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2015-02-05 23:21:37,214 INFO org.apache.hadoop.mapred.FileInputFormat (main): Total input paths to process : 1
+2015-02-05 23:21:37,541 INFO org.apache.hadoop.mapred.FileInputFormat (main): Total input paths to process : 1
+2015-02-05 23:21:38,537 INFO org.apache.hadoop.streaming.StreamJob (main): getLocalDirs(): [/mnt/var/lib/hadoop/mapred]
+2015-02-05 23:21:38,538 INFO org.apache.hadoop.streaming.StreamJob (main): Running job: job_201502052319_0003
+2015-02-05 23:21:38,538 INFO org.apache.hadoop.streaming.StreamJob (main): To kill this job, run:
+2015-02-05 23:21:38,538 INFO org.apache.hadoop.streaming.StreamJob (main): UNDEF/bin/hadoop job  -Dmapred.job.tracker=ip-172-31-42-141.us-west-2.compute.internal:9001 -kill job_201502052319_0003
+2015-02-05 23:21:38,538 INFO org.apache.hadoop.streaming.StreamJob (main): Tracking URL: http://ip-172-31-42-141.us-west-2.compute.internal:9100/jobdetails.jsp?jobid=job_201502052319_0003
+2015-02-05 23:21:39,571 INFO org.apache.hadoop.streaming.StreamJob (main):  map 0%  reduce 0%
+2015-02-05 23:21:51,903 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 0%
+2015-02-05 23:22:02,104 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 67%
+2015-02-05 23:22:03,108 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 0%
+2015-02-05 23:22:33,205 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 100%
+2015-02-05 23:22:33,206 INFO org.apache.hadoop.streaming.StreamJob (main): To kill this job, run:
+2015-02-05 23:22:33,207 INFO org.apache.hadoop.streaming.StreamJob (main): UNDEF/bin/hadoop job  -Dmapred.job.tracker=ip-172-31-42-141.us-west-2.compute.internal:9001 -kill job_201502052319_0003
+2015-02-05 23:22:33,214 INFO org.apache.hadoop.streaming.StreamJob (main): Tracking URL: http://ip-172-31-42-141.us-west-2.compute.internal:9100/jobdetails.jsp?jobid=job_201502052319_0003
+2015-02-05 23:22:33,214 ERROR org.apache.hadoop.streaming.StreamJob (main): Job not Successful!
+2015-02-05 23:22:33,214 INFO org.apache.hadoop.streaming.StreamJob (main): killJob...

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/mnt/var/lib/hadoop/mapred/taskTracker/jobcache/job_201502052319_0003/attempt_201502052319_0003_r_000000_0/work/./pagerank_reduce.py", line 28, in <module>
+    sys.stdout.write('%6.15f\t%s-%6.15f-%s\n' %(C - rank, cur_node, rank, info))
+NameError: name 'info' is not defined
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 1
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:389)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:591)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:109)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:327)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.streaming.PipeMapRed).
+log4j:WARN Please initialize the log4j system properly.

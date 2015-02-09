@@ -1,0 +1,70 @@
+2015-02-06 02:27:23,773 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=SHUFFLE, sessionId=
+2015-02-06 02:27:23,982 INFO org.apache.hadoop.mapred.ReduceTask (main): Host name: ip-172-31-37-202.us-west-2.compute.internal
+2015-02-06 02:27:24,061 INFO org.apache.hadoop.streaming.PipeMapRed (main): PipeMapRed exec [/mnt/var/lib/hadoop/mapred/taskTracker/jobcache/job_201502060206_0032/attempt_201502060206_0032_r_000000_2/work/./process_reduce.py]
+2015-02-06 02:27:24,199 INFO org.apache.hadoop.mapred.ReduceTask (main): ShuffleRamManager: MemoryLimit=78643200, MaxSingleShuffleLimit=19660800
+2015-02-06 02:27:24,209 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging on-disk files): attempt_201502060206_0032_r_000000_2 Thread started: Thread for merging on-disk files
+2015-02-06 02:27:24,210 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging on-disk files): attempt_201502060206_0032_r_000000_2 Thread waiting: Thread for merging on-disk files
+2015-02-06 02:27:24,211 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0032_r_000000_2 Need another 1 map output(s) where 0 is already in progress
+2015-02-06 02:27:24,215 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0032_r_000000_2: Got 1 new map-outputs & number of known map outputs is 1
+2015-02-06 02:27:24,216 INFO org.apache.hadoop.mapred.ReduceTask (main): attempt_201502060206_0032_r_000000_2 Scheduled 1 of 1 known outputs (0 slow hosts and 0 dup hosts)
+2015-02-06 02:27:24,216 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging in memory files): attempt_201502060206_0032_r_000000_2 Thread started: Thread for merging in memory files
+2015-02-06 02:27:24,273 INFO org.apache.hadoop.mapred.ReduceTask (MapOutputCopier attempt_201502060206_0032_r_000000_2.19): Shuffling 161893 bytes (161893 raw bytes) into RAM from attempt_201502060206_0032_m_000000_0
+2015-02-06 02:27:24,274 INFO org.apache.hadoop.mapred.ReduceTask (MapOutputCopier attempt_201502060206_0032_r_000000_2.19): Read 161893 bytes from map-output for attempt_201502060206_0032_m_000000_0
+2015-02-06 02:27:24,275 INFO org.apache.hadoop.mapred.ReduceTask (MapOutputCopier attempt_201502060206_0032_r_000000_2.19): Rec #1 from attempt_201502060206_0032_m_000000_0 -> (23, 824) from ip-172-31-37-202.us-west-2.compute.internal
+2015-02-06 02:27:25,216 INFO org.apache.hadoop.mapred.ReduceTask (main): Closed ram manager
+2015-02-06 02:27:25,223 INFO org.apache.hadoop.mapred.ReduceTask (main): Interleaved on-disk merge complete: 0 files left.
+2015-02-06 02:27:25,297 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging in memory files): Initiating in-memory merge with 1 segments...
+2015-02-06 02:27:25,309 INFO org.apache.hadoop.mapred.Merger (Thread for merging in memory files): Merging 1 sorted segments
+2015-02-06 02:27:25,309 INFO org.apache.hadoop.mapred.Merger (Thread for merging in memory files): Down to the last merge-pass, with 1 segments left of total size: 161893 bytes
+2015-02-06 02:27:25,369 INFO org.apache.hadoop.mapred.ReduceTask (Thread for merging in memory files): attempt_201502060206_0032_r_000000_2 Merge of the 1 files in-memory complete. Local file is /mnt/var/lib/hadoop/mapred/taskTracker/jobcache/job_201502060206_0032/attempt_201502060206_0032_r_000000_2/output/map_0.out of size 161893
+2015-02-06 02:27:25,370 INFO org.apache.hadoop.mapred.ReduceTask (main): In-memory merge complete: 0 files left.
+2015-02-06 02:27:25,370 INFO org.apache.hadoop.mapred.ReduceTask (main): Initiating final on-disk merge with 1 files
+2015-02-06 02:27:25,371 INFO org.apache.hadoop.mapred.Merger (main): Merging 1 sorted segments
+2015-02-06 02:27:25,377 INFO org.apache.hadoop.mapred.Merger (main): Down to the last merge-pass, with 1 segments left of total size: 161893 bytes
+2015-02-06 02:27:28,016 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Creating new file 's3n://cs144students/caltechftw/15/process/part-00000' in S3
+2015-02-06 02:27:28,018 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Outputstream for key 'caltechftw/15/process/part-00000' writing to tempfile '/mnt/var/lib/hadoop/s3/output-5598386988481175392.tmp'
+2015-02-06 02:27:28,023 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=1/0/0 in:0=1/3 [rec/s] out:0=0/3 [rec/s]
+2015-02-06 02:27:28,024 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=10/0/0 in:3=10/3 [rec/s] out:0=0/3 [rec/s]
+2015-02-06 02:27:28,026 INFO org.apache.hadoop.streaming.PipeMapRed (main): R/W/S=100/0/0 in:33=100/3 [rec/s] out:0=0/3 [rec/s]
+2015-02-06 02:27:28,047 INFO org.apache.hadoop.streaming.PipeMapRed (Thread-31): Records R/W=657/1
+2015-02-06 02:27:28,073 WARN org.apache.hadoop.streaming.PipeMapRed (main): java.io.IOException: Broken pipe
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:260)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:105)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:106)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:588)
+	at org.apache.hadoop.streaming.PipeReducer.reduce(PipeReducer.java:102)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:321)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+
+2015-02-06 02:27:28,073 INFO org.apache.hadoop.streaming.PipeMapRed (main): mapRedFinished
+2015-02-06 02:27:28,075 INFO org.apache.hadoop.fs.s3native.NativeS3FileSystem (main): Outputstream for key 'caltechftw/15/process/part-00000' was aborted, not performing upload.
+2015-02-06 02:27:28,075 WARN org.apache.hadoop.streaming.PipeMapRed (main): java.io.IOException: Bad file descriptor
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:260)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:105)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:106)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:588)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:109)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:338)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+
+2015-02-06 02:27:28,075 INFO org.apache.hadoop.streaming.PipeMapRed (main): mapRedFinished
+2015-02-06 02:27:28,076 WARN org.apache.hadoop.mapred.TaskTracker (main): Error running child
+java.io.IOException: subprocess still running
+R/W/S=657/20/0 in:219=657/3 [rec/s] out:6=20/3 [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 LOGNAME=null
+HOST=null
+USER=hadoop
+HADOOP_USER=null
+last Hadoop input: |null|
+last tool output: |FinalRank:4.147773	305|
+Date: Fri Feb 06 02:27:28 UTC 2015
+Broken pipe
+	at org.apache.hadoop.streaming.PipeReducer.reduce(PipeReducer.java:103)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:321)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)

@@ -1,0 +1,35 @@
+Job JOBID="job_201502052319_0003" JOBNAME="streamjob8830415709360821394.jar" USER="hadoop" SUBMIT_TIME="1423178498342" JOBCONF="hdfs://ip-172-31-42-141.us-west-2.compute.internal:9000/mnt/var/lib/hadoop/tmp/mapred/system/job_201502052319_0003/job.xml" 
+Job JOBID="job_201502052319_0003" LAUNCH_TIME="1423178501051" TOTAL_MAPS="1" TOTAL_REDUCES="1" 
+Task TASKID="task_201502052319_0003_m_000000" TASK_TYPE="MAP" START_TIME="1423178503539" SPLITS="/default-rack/localhost" 
+Task TASKID="task_201502052319_0003_r_000000" TASK_TYPE="REDUCE" START_TIME="1423178506014" SPLITS="" 
+MapAttempt TASK_TYPE="MAP" TASKID="task_201502052319_0003_m_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_m_000000_0" START_TIME="1423178503994" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" 
+MapAttempt TASK_TYPE="MAP" TASKID="task_201502052319_0003_m_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_m_000000_0" TASK_STATUS="SUCCESS" FINISH_TIME="1423178512360" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" 
+Task TASKID="task_201502052319_0003_m_000000" TASK_TYPE="MAP" TASK_STATUS="SUCCESS" FINISH_TIME="1423178512360" COUNTERS="File Systems.S3N bytes read:458,File Systems.Local bytes written:50,Map-Reduce Framework.Combine output records:0,Map-Reduce Framework.Map input records:20,Map-Reduce Framework.Map output bytes:0,Map-Reduce Framework.Map input bytes:458,Map-Reduce Framework.Combine input records:0,Map-Reduce Framework.Map output records:0" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_0" START_TIME="1423178506085" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_0" TASK_STATUS="FAILED" FINISH_TIME="1423178522944" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" ERROR="" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_1" START_TIME="1423178523000" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_1" TASK_STATUS="FAILED" FINISH_TIME="1423178533290" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" ERROR="" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_2" START_TIME="1423178533345" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_2" TASK_STATUS="FAILED" FINISH_TIME="1423178542796" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" ERROR="java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 1
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:389)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:591)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:109)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:327)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_3" START_TIME="1423178542881" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052319_0003_r_000000" TASK_ATTEMPT_ID="attempt_201502052319_0003_r_000000_3" TASK_STATUS="FAILED" FINISH_TIME="1423178552284" HOSTNAME="/default-rack/ip-172-31-42-141.us-west-2.compute.internal" ERROR="java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 1
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:389)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:591)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:109)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:327)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+" 
+Task TASKID="task_201502052319_0003_r_000000" TASK_TYPE="REDUCE" TASK_STATUS="FAILED" FINISH_TIME="1423178552285" ERROR="java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 1
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:389)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:591)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:109)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:327)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+" 
+Job JOBID="job_201502052319_0003" FINISH_TIME="1423178552285" JOB_STATUS="FAILED" FINISHED_MAPS="1" FINISHED_REDUCES="0" 

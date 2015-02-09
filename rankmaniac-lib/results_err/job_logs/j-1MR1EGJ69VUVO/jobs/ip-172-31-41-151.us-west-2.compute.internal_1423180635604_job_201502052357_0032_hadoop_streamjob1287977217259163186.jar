@@ -1,0 +1,56 @@
+Job JOBID="job_201502052357_0032" JOBNAME="streamjob1287977217259163186.jar" USER="hadoop" SUBMIT_TIME="1423181833571" JOBCONF="hdfs://ip-172-31-41-151.us-west-2.compute.internal:9000/mnt/var/lib/hadoop/tmp/mapred/system/job_201502052357_0032/job.xml" 
+Job JOBID="job_201502052357_0032" LAUNCH_TIME="1423181835225" TOTAL_MAPS="1" TOTAL_REDUCES="1" 
+Task TASKID="task_201502052357_0032_m_000000" TASK_TYPE="MAP" START_TIME="1423181838432" SPLITS="/default-rack/localhost" 
+Task TASKID="task_201502052357_0032_r_000000" TASK_TYPE="REDUCE" START_TIME="1423181839862" SPLITS="" 
+MapAttempt TASK_TYPE="MAP" TASKID="task_201502052357_0032_m_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_m_000000_0" START_TIME="1423181838680" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" 
+MapAttempt TASK_TYPE="MAP" TASKID="task_201502052357_0032_m_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_m_000000_0" TASK_STATUS="SUCCESS" FINISH_TIME="1423181847173" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" 
+Task TASKID="task_201502052357_0032_m_000000" TASK_TYPE="MAP" TASK_STATUS="SUCCESS" FINISH_TIME="1423181847173" COUNTERS="File Systems.S3N bytes read:158959,File Systems.Local bytes written:163205,Map-Reduce Framework.Combine output records:0,Map-Reduce Framework.Map input records:1000,Map-Reduce Framework.Map output bytes:159423,Map-Reduce Framework.Map input bytes:158959,Map-Reduce Framework.Combine input records:0,Map-Reduce Framework.Map output records:1000" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_0" START_TIME="1423181839981" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_0" TASK_STATUS="FAILED" FINISH_TIME="1423181857043" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" ERROR="" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_1" START_TIME="1423181857066" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_1" TASK_STATUS="FAILED" FINISH_TIME="1423181866424" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" ERROR="" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_2" START_TIME="1423181866444" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_2" TASK_STATUS="FAILED" FINISH_TIME="1423181875985" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" ERROR="java.io.IOException: subprocess still running
+R/W/S=657/20/0 in:219=657/3 [rec/s] out:6=20/3 [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 LOGNAME=null
+HOST=null
+USER=hadoop
+HADOOP_USER=null
+last Hadoop input: |null|
+last tool output: |FinalRank:4.147773	305|
+Date: Fri Feb 06 00:17:52 UTC 2015
+Broken pipe
+	at org.apache.hadoop.streaming.PipeReducer.reduce(PipeReducer.java:103)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:321)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_3" START_TIME="1423181876042" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" 
+ReduceAttempt TASK_TYPE="REDUCE" TASKID="task_201502052357_0032_r_000000" TASK_ATTEMPT_ID="attempt_201502052357_0032_r_000000_3" TASK_STATUS="FAILED" FINISH_TIME="1423181885468" HOSTNAME="/default-rack/ip-172-31-41-151.us-west-2.compute.internal" ERROR="java.io.IOException: subprocess still running
+R/W/S=657/20/0 in:219=657/3 [rec/s] out:6=20/3 [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 LOGNAME=null
+HOST=null
+USER=hadoop
+HADOOP_USER=null
+last Hadoop input: |null|
+last tool output: |FinalRank:4.147773	305|
+Date: Fri Feb 06 00:18:02 UTC 2015
+Broken pipe
+	at org.apache.hadoop.streaming.PipeReducer.reduce(PipeReducer.java:103)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:321)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+" 
+Task TASKID="task_201502052357_0032_r_000000" TASK_TYPE="REDUCE" TASK_STATUS="FAILED" FINISH_TIME="1423181885468" ERROR="java.io.IOException: subprocess still running
+R/W/S=657/20/0 in:219=657/3 [rec/s] out:6=20/3 [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 LOGNAME=null
+HOST=null
+USER=hadoop
+HADOOP_USER=null
+last Hadoop input: |null|
+last tool output: |FinalRank:4.147773	305|
+Date: Fri Feb 06 00:18:02 UTC 2015
+Broken pipe
+	at org.apache.hadoop.streaming.PipeReducer.reduce(PipeReducer.java:103)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:321)
+	at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2216)
+" 
+Job JOBID="job_201502052357_0032" FINISH_TIME="1423181885468" JOB_STATUS="FAILED" FINISHED_MAPS="1" FINISHED_REDUCES="0" 

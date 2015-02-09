@@ -1,0 +1,13 @@
+2015-02-06 02:54:36,531 WARN org.apache.hadoop.mapred.JobClient (main): Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2015-02-06 02:54:39,342 INFO org.apache.hadoop.mapred.FileInputFormat (main): Total input paths to process : 1
+2015-02-06 02:54:39,416 INFO org.apache.hadoop.mapred.FileInputFormat (main): Total input paths to process : 1
+2015-02-06 02:54:42,010 INFO org.apache.hadoop.streaming.StreamJob (main): getLocalDirs(): [/mnt/var/lib/hadoop/mapred]
+2015-02-06 02:54:42,010 INFO org.apache.hadoop.streaming.StreamJob (main): Running job: job_201502060254_0001
+2015-02-06 02:54:42,010 INFO org.apache.hadoop.streaming.StreamJob (main): To kill this job, run:
+2015-02-06 02:54:42,010 INFO org.apache.hadoop.streaming.StreamJob (main): UNDEF/bin/hadoop job  -Dmapred.job.tracker=ip-172-31-36-246.us-west-2.compute.internal:9001 -kill job_201502060254_0001
+2015-02-06 02:54:42,011 INFO org.apache.hadoop.streaming.StreamJob (main): Tracking URL: http://ip-172-31-36-246.us-west-2.compute.internal:9100/jobdetails.jsp?jobid=job_201502060254_0001
+2015-02-06 02:54:43,113 INFO org.apache.hadoop.streaming.StreamJob (main):  map 0%  reduce 0%
+2015-02-06 02:55:04,732 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 0%
+2015-02-06 02:55:14,095 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 100%
+2015-02-06 02:55:14,096 INFO org.apache.hadoop.streaming.StreamJob (main): Job complete: job_201502060254_0001
+2015-02-06 02:55:14,096 INFO org.apache.hadoop.streaming.StreamJob (main): Output: s3n://cs144students/caltechftw/0/pagerank/

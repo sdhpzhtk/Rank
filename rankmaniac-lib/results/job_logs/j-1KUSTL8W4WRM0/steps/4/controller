@@ -1,0 +1,6 @@
+2015-02-07T16:03:40.128Z INFO Fetching jar file.
+2015-02-07T16:03:42.276Z INFO Working dir /mnt/var/lib/hadoop/steps/4
+2015-02-07T16:03:42.276Z INFO Executing /usr/lib/jvm/java-6-sun/bin/java -cp /home/hadoop/conf:/usr/lib/jvm/java-6-sun/lib/tools.jar:/home/hadoop:/home/hadoop/hadoop-0.18-core.jar:/home/hadoop/hadoop-0.18-tools.jar:/home/hadoop/lib/*:/home/hadoop/lib/jetty-ext/* -Xmx1000m -Dhadoop.log.dir=/mnt/var/log/hadoop/steps/4 -Dhadoop.log.file=syslog -Dhadoop.home.dir=/home/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,DRFA -Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/4/tmp -Djava.library.path=/home/hadoop/lib/native/Linux-i386-32 org.apache.hadoop.mapred.JobShell /home/hadoop/contrib/streaming/hadoop-streaming.jar -jobconf mapred.map.tasks=1 -jobconf mapred.reduce.tasks=1 -mapper s3n://cs144students/caltechftw/process_map.py -reducer s3n://cs144students/caltechftw/process_reduce.py -input s3n://cs144students/caltechftw/1/pagerank/ -output s3n://cs144students/caltechftw/1/process/
+2015-02-07T16:04:10.312Z INFO Execution ended with ret val 0
+2015-02-07T16:04:12.466Z INFO Step created jobs: job_201502071601_0004
+2015-02-07T16:04:15.047Z INFO Step succeeded

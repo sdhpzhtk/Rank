@@ -1,0 +1,161 @@
+2015-02-06 02:53:54,908 INFO org.apache.hadoop.dfs.NameNode (main): STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = ip-172-31-36-246.us-west-2.compute.internal/172.31.36.246
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 0.18
+STARTUP_MSG:   build =  -r ; compiled by 'root' on Fri Apr 29 21:39:05 UTC 2011
+************************************************************/
+2015-02-06 02:53:55,724 INFO org.apache.hadoop.ipc.metrics.RpcMetrics (main): Initializing RPC Metrics with hostName=NameNode, port=9000
+2015-02-06 02:53:56,004 INFO org.apache.hadoop.dfs.NameNode (main): Namenode up at: ip-172-31-36-246.us-west-2.compute.internal/172.31.36.246:9000
+2015-02-06 02:53:56,009 INFO org.apache.hadoop.metrics.jvm.JvmMetrics (main): Initializing JVM Metrics with processName=NameNode, sessionId=null
+2015-02-06 02:53:56,325 INFO org.apache.hadoop.dfs.NameNodeMetrics (main): Initializing NameNodeMeterics using context object:org.apache.hadoop.metrics.spi.NullContext
+2015-02-06 02:53:57,550 INFO org.apache.hadoop.fs.FSNamesystem (main): fsOwner=hadoop,hadoop
+2015-02-06 02:53:57,551 INFO org.apache.hadoop.fs.FSNamesystem (main): supergroup=supergroup
+2015-02-06 02:53:57,551 INFO org.apache.hadoop.fs.FSNamesystem (main): isPermissionEnabled=true
+2015-02-06 02:53:57,621 INFO org.apache.hadoop.dfs.FSNamesystemMetrics (main): Initializing FSNamesystemMeterics using context object:org.apache.hadoop.metrics.spi.NullContext
+2015-02-06 02:53:57,623 INFO org.apache.hadoop.fs.FSNamesystem (main): Registered FSNamesystemStatusMBean
+2015-02-06 02:53:57,736 INFO org.apache.hadoop.dfs.Storage (main): Number of files = 0
+2015-02-06 02:53:57,736 INFO org.apache.hadoop.dfs.Storage (main): Number of files under construction = 0
+2015-02-06 02:53:57,736 INFO org.apache.hadoop.dfs.Storage (main): Image file of size 80 loaded in 0 seconds.
+2015-02-06 02:53:57,737 INFO org.apache.hadoop.dfs.Storage (main): Edits file edits of size 4 edits # 0 loaded in 0 seconds.
+2015-02-06 02:53:57,738 INFO org.apache.hadoop.fs.FSNamesystem (main): Finished loading FSImage in 1306 msecs
+2015-02-06 02:53:57,740 INFO org.apache.hadoop.fs.FSNamesystem (main): Total number of blocks = 0
+2015-02-06 02:53:57,740 INFO org.apache.hadoop.fs.FSNamesystem (main): Number of invalid blocks = 0
+2015-02-06 02:53:57,740 INFO org.apache.hadoop.fs.FSNamesystem (main): Number of under-replicated blocks = 0
+2015-02-06 02:53:57,740 INFO org.apache.hadoop.fs.FSNamesystem (main): Number of  over-replicated blocks = 0
+2015-02-06 02:53:57,740 INFO org.apache.hadoop.dfs.StateChange (main): STATE* Leaving safe mode after 1 secs.
+2015-02-06 02:53:57,741 INFO org.apache.hadoop.dfs.StateChange (main): STATE* Network topology has 0 racks and 0 datanodes
+2015-02-06 02:53:57,741 INFO org.apache.hadoop.dfs.StateChange (main): STATE* UnderReplicatedBlocks has 0 blocks
+2015-02-06 02:54:03,018 INFO org.mortbay.util.Credential (main): Checking Resource aliases
+2015-02-06 02:54:03,387 INFO org.mortbay.http.HttpServer (main): Version Jetty/5.1.4
+2015-02-06 02:54:03,388 INFO org.mortbay.util.Container (main): Started HttpContext[/static,/static]
+2015-02-06 02:54:03,388 INFO org.mortbay.util.Container (main): Started HttpContext[/logs,/logs]
+2015-02-06 02:54:05,375 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.servlet.WebApplicationHandler@648016
+2015-02-06 02:54:05,473 INFO org.mortbay.util.Container (main): Started WebApplicationContext[/,/]
+2015-02-06 02:54:05,954 INFO org.mortbay.http.SocketListener (main): Started SocketListener on 0.0.0.0:9101
+2015-02-06 02:54:05,954 INFO org.mortbay.util.Container (main): Started org.mortbay.jetty.Server@178460d
+2015-02-06 02:54:05,954 INFO org.apache.hadoop.fs.FSNamesystem (main): Web-server up at: 0.0.0.0:9101
+2015-02-06 02:54:05,955 INFO org.apache.hadoop.ipc.Server (IPC Server Responder): IPC Server Responder: starting
+2015-02-06 02:54:06,023 INFO org.apache.hadoop.ipc.Server (IPC Server listener on 9000): IPC Server listener on 9000: starting
+2015-02-06 02:54:06,029 INFO org.apache.hadoop.ipc.Server (IPC Server handler 0 on 9000): IPC Server handler 0 on 9000: starting
+2015-02-06 02:54:06,029 INFO org.apache.hadoop.ipc.Server (IPC Server handler 1 on 9000): IPC Server handler 1 on 9000: starting
+2015-02-06 02:54:06,029 INFO org.apache.hadoop.ipc.Server (IPC Server handler 2 on 9000): IPC Server handler 2 on 9000: starting
+2015-02-06 02:54:06,030 INFO org.apache.hadoop.ipc.Server (IPC Server handler 3 on 9000): IPC Server handler 3 on 9000: starting
+2015-02-06 02:54:06,030 INFO org.apache.hadoop.ipc.Server (IPC Server handler 4 on 9000): IPC Server handler 4 on 9000: starting
+2015-02-06 02:54:06,030 INFO org.apache.hadoop.ipc.Server (IPC Server handler 5 on 9000): IPC Server handler 5 on 9000: starting
+2015-02-06 02:54:06,030 INFO org.apache.hadoop.ipc.Server (IPC Server handler 6 on 9000): IPC Server handler 6 on 9000: starting
+2015-02-06 02:54:06,031 INFO org.apache.hadoop.ipc.Server (IPC Server handler 7 on 9000): IPC Server handler 7 on 9000: starting
+2015-02-06 02:54:06,031 INFO org.apache.hadoop.ipc.Server (IPC Server handler 8 on 9000): IPC Server handler 8 on 9000: starting
+2015-02-06 02:54:06,031 INFO org.apache.hadoop.ipc.Server (IPC Server handler 9 on 9000): IPC Server handler 9 on 9000: starting
+2015-02-06 02:54:06,031 INFO org.apache.hadoop.ipc.Server (IPC Server handler 10 on 9000): IPC Server handler 10 on 9000: starting
+2015-02-06 02:54:06,031 INFO org.apache.hadoop.ipc.Server (IPC Server handler 11 on 9000): IPC Server handler 11 on 9000: starting
+2015-02-06 02:54:06,032 INFO org.apache.hadoop.ipc.Server (IPC Server handler 12 on 9000): IPC Server handler 12 on 9000: starting
+2015-02-06 02:54:06,032 INFO org.apache.hadoop.ipc.Server (IPC Server handler 13 on 9000): IPC Server handler 13 on 9000: starting
+2015-02-06 02:54:06,032 INFO org.apache.hadoop.ipc.Server (IPC Server handler 14 on 9000): IPC Server handler 14 on 9000: starting
+2015-02-06 02:54:06,032 INFO org.apache.hadoop.ipc.Server (IPC Server handler 15 on 9000): IPC Server handler 15 on 9000: starting
+2015-02-06 02:54:06,032 INFO org.apache.hadoop.ipc.Server (IPC Server handler 16 on 9000): IPC Server handler 16 on 9000: starting
+2015-02-06 02:54:06,033 INFO org.apache.hadoop.ipc.Server (IPC Server handler 17 on 9000): IPC Server handler 17 on 9000: starting
+2015-02-06 02:54:06,033 INFO org.apache.hadoop.ipc.Server (IPC Server handler 18 on 9000): IPC Server handler 18 on 9000: starting
+2015-02-06 02:54:06,429 INFO org.apache.hadoop.ipc.Server (IPC Server handler 19 on 9000): IPC Server handler 19 on 9000: starting
+2015-02-06 02:54:22,821 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.registerDatanode: node registration from 172.31.36.246:9200 storage DS-1029678236-172.31.36.246-9200-1423191262815
+2015-02-06 02:54:22,824 INFO org.apache.hadoop.net.NetworkTopology (org.apache.hadoop.dfs.FSNamesystem$ResolutionMonitor@13c7378): Adding a new node: /default-rack/172.31.36.246:9200
+2015-02-06 02:54:38,795 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 13 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0001/job.jar. blk_-4737156821057754984_1001
+2015-02-06 02:54:38,962 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 14 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-4737156821057754984_1001 size 112974
+2015-02-06 02:54:38,973 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 15 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0001/job.jar. New replication is 10
+2015-02-06 02:54:39,431 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 18 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0001/job.split. blk_7101697341950916379_1002
+2015-02-06 02:54:39,438 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 0 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_7101697341950916379_1002 size 113
+2015-02-06 02:54:40,003 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 6 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0001/job.xml. blk_-6679753065189678718_1003
+2015-02-06 02:54:40,015 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-6679753065189678718_1003 size 16627
+2015-02-06 02:55:13,182 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 18 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-4737156821057754984 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:55:13,183 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 18 on 9000): BLOCK* NameSystem.addToInvalidates: blk_7101697341950916379 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:55:13,183 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 18 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-6679753065189678718 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:55:13,183 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 18 on 9000): Number of transactions: 24 Total time for transactions(ms): 0 Number of syncs: 17 SyncTimes(ms): 155 
+2015-02-06 02:55:14,988 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_-4737156821057754984_1001 blk_-6679753065189678718_1003 blk_7101697341950916379_1002
+2015-02-06 02:55:25,868 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 11 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0002/job.jar. blk_-4381140992376066864_1004
+2015-02-06 02:55:25,947 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 12 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-4381140992376066864_1004 size 112974
+2015-02-06 02:55:25,969 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 13 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0002/job.jar. New replication is 10
+2015-02-06 02:55:26,920 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 17 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0002/job.split. blk_-518489560540389680_1005
+2015-02-06 02:55:26,986 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 18 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-518489560540389680_1005 size 125
+2015-02-06 02:55:27,122 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 2 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0002/job.xml. blk_1403948107775742699_1006
+2015-02-06 02:55:27,126 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_1403948107775742699_1006 size 16621
+2015-02-06 02:55:50,297 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 12 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-4381140992376066864 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:55:50,297 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 12 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-518489560540389680 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:55:50,297 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 12 on 9000): BLOCK* NameSystem.addToInvalidates: blk_1403948107775742699 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:55:51,294 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_1403948107775742699_1006 blk_-518489560540389680_1005 blk_-4381140992376066864_1004
+2015-02-06 02:56:04,566 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 3 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0003/job.jar. blk_5478721502935265453_1007
+2015-02-06 02:56:04,590 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_5478721502935265453_1007 size 112974
+2015-02-06 02:56:04,676 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 6 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0003/job.jar. New replication is 10
+2015-02-06 02:56:05,735 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 9 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0003/job.split. blk_-20658894164365782_1008
+2015-02-06 02:56:05,741 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 10 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-20658894164365782_1008 size 124
+2015-02-06 02:56:05,906 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 16 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0003/job.xml. blk_-5962920375284470931_1009
+2015-02-06 02:56:05,911 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-5962920375284470931_1009 size 16627
+2015-02-06 02:56:29,634 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addToInvalidates: blk_5478721502935265453 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:56:29,634 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-20658894164365782 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:56:29,634 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-5962920375284470931 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:56:29,634 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 4 on 9000): Number of transactions: 56 Total time for transactions(ms): 1 Number of syncs: 43 SyncTimes(ms): 407 
+2015-02-06 02:56:30,456 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_-5962920375284470931_1009 blk_5478721502935265453_1007 blk_-20658894164365782_1008
+2015-02-06 02:56:41,810 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 16 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0004/job.jar. blk_8487467711619131783_1010
+2015-02-06 02:56:41,889 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_8487467711619131783_1010 size 112974
+2015-02-06 02:56:41,896 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 18 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0004/job.jar. New replication is 10
+2015-02-06 02:56:42,885 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 3 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0004/job.split. blk_8234821518790817541_1011
+2015-02-06 02:56:42,889 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_8234821518790817541_1011 size 125
+2015-02-06 02:56:43,024 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0004/job.xml. blk_-6102950483392875314_1012
+2015-02-06 02:56:43,089 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 11 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-6102950483392875314_1012 size 16621
+2015-02-06 02:57:05,571 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 17 on 9000): BLOCK* NameSystem.addToInvalidates: blk_8487467711619131783 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:57:05,571 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 17 on 9000): BLOCK* NameSystem.addToInvalidates: blk_8234821518790817541 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:57:05,571 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 17 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-6102950483392875314 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:57:06,559 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_8234821518790817541_1011 blk_-6102950483392875314_1012 blk_8487467711619131783_1010
+2015-02-06 02:57:18,777 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 8 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0005/job.jar. blk_-4928189318752149060_1013
+2015-02-06 02:57:18,855 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 11 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-4928189318752149060_1013 size 112974
+2015-02-06 02:57:18,862 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 12 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0005/job.jar. New replication is 10
+2015-02-06 02:57:20,058 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 16 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0005/job.split. blk_3181035542193633391_1014
+2015-02-06 02:57:20,063 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 17 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_3181035542193633391_1014 size 124
+2015-02-06 02:57:20,182 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 1 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0005/job.xml. blk_1027172739267930658_1015
+2015-02-06 02:57:20,186 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 0 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_1027172739267930658_1015 size 16627
+2015-02-06 02:57:42,660 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 11 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-4928189318752149060 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:57:42,661 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 11 on 9000): BLOCK* NameSystem.addToInvalidates: blk_3181035542193633391 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:57:42,661 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 11 on 9000): BLOCK* NameSystem.addToInvalidates: blk_1027172739267930658 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:57:42,661 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 11 on 9000): Number of transactions: 88 Total time for transactions(ms): 1 Number of syncs: 69 SyncTimes(ms): 619 
+2015-02-06 02:57:42,661 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_-4928189318752149060_1013 blk_3181035542193633391_1014 blk_1027172739267930658_1015
+2015-02-06 02:57:55,229 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 1 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0006/job.jar. blk_6276845030451229333_1016
+2015-02-06 02:57:55,248 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 0 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_6276845030451229333_1016 size 112974
+2015-02-06 02:57:55,254 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 3 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0006/job.jar. New replication is 10
+2015-02-06 02:57:56,768 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 8 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0006/job.split. blk_-929286179858664383_1017
+2015-02-06 02:57:56,776 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 5 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-929286179858664383_1017 size 125
+2015-02-06 02:57:57,297 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 13 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0006/job.xml. blk_1803477154578223478_1018
+2015-02-06 02:57:57,302 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 16 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_1803477154578223478_1018 size 16620
+2015-02-06 02:58:24,519 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addToInvalidates: blk_6276845030451229333 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:58:24,519 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-929286179858664383 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:58:24,519 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.addToInvalidates: blk_1803477154578223478 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:58:24,815 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_-929286179858664383_1017 blk_1803477154578223478_1018 blk_6276845030451229333_1016
+2015-02-06 02:58:36,538 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 16 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0007/job.jar. blk_-1861699801406611950_1019
+2015-02-06 02:58:36,557 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 14 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-1861699801406611950_1019 size 112974
+2015-02-06 02:58:36,564 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 19 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0007/job.jar. New replication is 10
+2015-02-06 02:58:38,151 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 0 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0007/job.split. blk_-3671111815732322580_1020
+2015-02-06 02:58:38,158 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 3 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-3671111815732322580_1020 size 124
+2015-02-06 02:58:38,679 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 5 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0007/job.xml. blk_7957977743505811250_1021
+2015-02-06 02:58:38,686 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_7957977743505811250_1021 size 16627
+2015-02-06 02:59:00,041 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-1861699801406611950 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:59:00,042 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-3671111815732322580 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:59:00,042 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.addToInvalidates: blk_7957977743505811250 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:59:00,042 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 15 on 9000): Number of transactions: 120 Total time for transactions(ms): 2 Number of syncs: 95 SyncTimes(ms): 891 
+2015-02-06 02:59:00,950 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_-1861699801406611950_1019 blk_7957977743505811250_1021 blk_-3671111815732322580_1020
+2015-02-06 02:59:13,087 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 5 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0008/job.jar. blk_-4853979072133869244_1022
+2015-02-06 02:59:13,166 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 9 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-4853979072133869244_1022 size 112974
+2015-02-06 02:59:13,174 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 12 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0008/job.jar. New replication is 10
+2015-02-06 02:59:14,350 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 10 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0008/job.split. blk_-5383348730801381419_1023
+2015-02-06 02:59:14,358 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 15 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-5383348730801381419_1023 size 125
+2015-02-06 02:59:14,819 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 0 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0008/job.xml. blk_-9109561869136177834_1024
+2015-02-06 02:59:14,826 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 2 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-9109561869136177834_1024 size 16621
+2015-02-06 02:59:38,559 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-4853979072133869244 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:59:38,559 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-5383348730801381419 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:59:38,560 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.addToInvalidates: blk_-9109561869136177834 is added to invalidSet of 172.31.36.246:9200
+2015-02-06 02:59:40,208 INFO org.apache.hadoop.dfs.StateChange (org.apache.hadoop.dfs.FSNamesystem$ReplicationMonitor@296f76): BLOCK* ask 172.31.36.246:9200 to delete  blk_-5383348730801381419_1023 blk_-9109561869136177834_1024 blk_-4853979072133869244_1022
+2015-02-06 02:59:51,880 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 4 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0009/job.jar. blk_-6699473647097572614_1025
+2015-02-06 02:59:51,959 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 2 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_-6699473647097572614_1025 size 112974
+2015-02-06 02:59:51,967 INFO org.apache.hadoop.fs.FSNamesystem (IPC Server handler 6 on 9000): Increasing replication for file /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0009/job.jar. New replication is 10
+2015-02-06 02:59:52,912 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 7 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0009/job.split. blk_7086946862978573781_1026
+2015-02-06 02:59:52,917 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 12 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_7086946862978573781_1026 size 124
+2015-02-06 02:59:53,039 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 10 on 9000): BLOCK* NameSystem.allocateBlock: /mnt/var/lib/hadoop/tmp/mapred/system/job_201502060254_0009/job.xml. blk_7638996592737001440_1027
+2015-02-06 02:59:53,044 INFO org.apache.hadoop.dfs.StateChange (IPC Server handler 19 on 9000): BLOCK* NameSystem.addStoredBlock: blockMap updated: 172.31.36.246:9200 is added to blk_7638996592737001440_1027 size 16627

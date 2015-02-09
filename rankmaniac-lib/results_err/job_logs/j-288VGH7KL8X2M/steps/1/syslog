@@ -1,0 +1,2 @@
+2015-02-05 23:22:06,138 WARN org.apache.hadoop.mapred.JobClient (main): Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2015-02-05 23:22:09,000 ERROR org.apache.hadoop.streaming.StreamJob (main): Error launching job , Output path already exists : Output directory s3n://cs144students/caltechftw/0/pagerank already exists and is not empty

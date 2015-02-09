@@ -1,0 +1,4 @@
+2015-02-06 00:00:04,863 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 99%
+2015-02-06 00:00:06,820 INFO org.apache.hadoop.streaming.StreamJob (main):  map 100%  reduce 100%
+2015-02-06 00:00:06,821 INFO org.apache.hadoop.streaming.StreamJob (main): Job complete: job_201502052357_0004
+2015-02-06 00:00:06,821 INFO org.apache.hadoop.streaming.StreamJob (main): Output: s3n://cs144students/caltechftw/1/process/
