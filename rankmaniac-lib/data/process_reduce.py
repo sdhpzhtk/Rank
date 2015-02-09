@@ -2,6 +2,9 @@
 
 import sys
 
+# Maximum number of iterations.
+MAX_ITER = 50
+
 # Number of top nodes to be computed.
 NUM_SHOW = 20
 # Number of nodes checked for convergence.
@@ -48,7 +51,9 @@ for i in xrange(N):
     # Stopping criteria:
     # 1) Relative change in rank for the node is small.
     # 2) The relative ranking among the current N nodes has not changed.
-    if (abs(rank - pre_rank)/pre_rank > .001) or (last_pre_rank is not None and last_pre_rank < pre_rank):
+    if (num_iter < MAX_ITER) and \
+       ((abs(rank - pre_rank)/pre_rank > .001) or \
+        (last_pre_rank is not None and last_pre_rank < pre_rank)):
         stop = False
         break
 
@@ -57,6 +62,9 @@ for i in xrange(N):
     if count < NUM_SHOW:
         count += 1
         final_ranks.append('FinalRank:%f\t%s\n' %(rank, nodeID))
+
+    if count == NUM_SHOW and num_iter == MAX_ITER:
+        break
 
 if stop:
     # If we have reached the stopping criteria, then print out results
