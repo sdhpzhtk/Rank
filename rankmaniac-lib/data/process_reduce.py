@@ -2,72 +2,77 @@
 
 import sys
 
-#
-# This program simply represents the identity function.
-#
-
-# Number of nodes for printing in final rank
+# Number of top nodes to be computed.
 NUM_SHOW = 20
-# Number of nodes we check for convergence
-N = max(20, NUM_SHOW)
+# Number of nodes checked for convergence.
+N = max(50, NUM_SHOW)
 
-sum = 0.0
-
-# The lines for "FinalRank"
+# The lines for "FinalRank".
 final_ranks = []
 
-# the pre-rank of the previous node, for checking stopping criteria
+# The pre-rank of the previous node, for checking stopping criterion.
 last_pre_rank = None
 
-# The lines of actuall node info
+# The input lines (containing node info) for the next iteration.
 lines = []
 stop = True
 
-# cnt keeps the number of lines in final_ranks
-cnt = 0
+# count is the number of lines in final_ranks.
+count = 0
 
-# We first process N nodes
+# Read the iteration line. It is the first line since its key is C.
+#line = sys.stdin.readline()
+#num_iter = int(line.strip().split('\t')[1])
+
+# We first process the top N nodes.
 for i in xrange(N):
     line = sys.stdin.readline()
     if not line:
         break
     
-    # Note we combined the data with '-' in pagerank_process
+    # data format: nodeId-rank-N-prerank-neighbor1-neighbor2-...
     data = (line.strip().split('\t')[1]).split('-')
     nodeID = data[0]
     rank = float(data[1])
-    pre_rank = float(data[2][1:])
-    links = data[3:]
+    # Skip data[2] which is 'N'.
+    pre_rank = float(data[3])
+    neighbors = data[4:]
 
     line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
-    if links:
-        line += ',' + ','.join(links)
+    if neighbors:
+        line += ',' + ','.join(neighbors)
     line += '\n'
+
     lines.append(line)
 
-    # Stop criteria:
-    # 1) difference between the current and previous rank is small
-    # 2) the relative ranking between the current N nodes has not changed
-    if last_pre_rank is not None and (abs(rank - pre_rank) > .005 or last_pre_rank < pre_rank):
+    # Stopping criteria:
+    # 1) Relative change in rank for the node is small.
+    # 2) The relative ranking among the current N nodes has not changed.
+    if (abs(rank - pre_rank)/pre_rank > .001) or (last_pre_rank is not None and last_pre_rank < pre_rank):
         stop = False
         break
+
     last_pre_rank = pre_rank
 
-    if cnt < NUM_SHOW:
-        cnt += 1
+    if count < NUM_SHOW:
+        count += 1
         final_ranks.append('FinalRank:%f\t%s\n' %(rank, nodeID))
 
 if stop:
     # If we have reached the stopping criteria, then print out results
-    # and consume all inputs
-    for line in final_ranks[:NUM_SHOW]:
+    # and consume all inputs.
+    for line in final_ranks:
         sys.stdout.write(line)
     while True:
         line = sys.stdin.readline()
         if not line:
             break
 else:
-    # Otherwise, read in all inputs and output back the corresponding format
+    # Otherwise, read in all inputs and output back the corresponding format.
+  
+    # First add iteration line. 
+#    sys.stdout.write('%s\t%d\n' %('I', num_iter))
+  
     for line in lines:
         sys.stdout.write(line)
     while True:
@@ -78,15 +83,11 @@ else:
         data = (line.strip().split('\t')[1]).split('-')
         nodeID = data[0]
         rank = float(data[1])
-        pre_rank = float(data[2][1:])
-        links = data[3:]
+        pre_rank = float(data[3])
+        neighbors = data[4:]
         
         line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
-        if links:
-            line += ',' + ','.join(links)
+        if neighbors:
+            line += ',' + ','.join(neighbors)
         line += '\n'
         sys.stdout.write(line)
-
-
-
-
