@@ -20,9 +20,9 @@ stop = True
 # count is the number of lines in final_ranks.
 count = 0
 
-# Read the iteration line. It is the first line since its key is C.
-#line = sys.stdin.readline()
-#num_iter = int(line.strip().split('\t')[1])
+# Read the iteration line. It is the first line since only it has key 0.
+line = sys.stdin.readline()
+num_iter = int(line.strip().split('\t')[1])
 
 # We first process the top N nodes.
 for i in xrange(N):
@@ -71,7 +71,7 @@ else:
     # Otherwise, read in all inputs and output back the corresponding format.
   
     # First add iteration line. 
-#    sys.stdout.write('%s\t%d\n' %('I', num_iter))
+    sys.stdout.write('%s\t%d\n' %('I', num_iter))
   
     for line in lines:
         sys.stdout.write(line)

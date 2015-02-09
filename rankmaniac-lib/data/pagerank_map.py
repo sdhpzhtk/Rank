@@ -25,11 +25,11 @@ for line in sys.stdin:
             cur_rank = float(cur_rank)
             for j in neighbors:
                 sys.stdout.write('%s\t%6.15f\n' %(j, cur_rank/deg))
-#    if line[0] == 'I':
-#       first_iter = False
-#       # Format: I\tn
-#       n = int(line.strip().split('\t')[1])
-#       sys.stdout.write('%s\t%d\n' %('I', n + 1))
+    if line[0] == 'I':
+       first_iter = False
+       # Format: I\tn
+       n = int(line.strip().split('\t')[1])
+       sys.stdout.write('%s\t%d\n' %('I', n + 1))
 
-#if first_iter:
-#   sys.stdout.write('%s\t%d\n' %('I', 1))
+if first_iter:
+   sys.stdout.write('%s\t%d\n' %('I', 1))

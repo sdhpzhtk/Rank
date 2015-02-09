@@ -17,11 +17,11 @@ while True:
         break
 
     # Iteration line: I\tn.
-#    if line[0] == 'I':
-       # Format: C\tn
-#       sys.stdout.write('%6.15f\t%s\n' %(C, line[2]))
-#    else:
-    if True:
+    if line[0] == 'I':
+        # Format: 0\tn
+        n = int(line.strip().split('\t')[1])
+        sys.stdout.write('%6.15f\t%s\n' %(0, n))
+    else:
         nodeID, data = line.strip().split('\t')
 
         if cur_node is None:
