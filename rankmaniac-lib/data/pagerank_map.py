@@ -2,8 +2,6 @@
 
 import sys
 
-first_iter = True
-
 for line in sys.stdin:
     # Only process lines of the form "NodeId:\t....".
     if line[0] == 'N':
@@ -25,11 +23,12 @@ for line in sys.stdin:
             cur_rank = float(cur_rank)
             for j in neighbors:
                 sys.stdout.write('%s\t%6.15f\n' %(j, cur_rank/deg))
-    if line[0] == 'I':
-       first_iter = False
+    elif line[0] == 'I':
        # Format: I\tn
        n = int(line.strip().split('\t')[1])
-       sys.stdout.write('%s\t%d\n' %('I', n + 1))
+       sys.stdout.write('%s\t%d\n' %('I', n))
+    elif line[0] == 'C':
+       # Format: C\tm
+       m = int(line.strip().split('\t')[1])
+       sys.stdout.write('%s\t%d\n' %('C', m))
 
-if first_iter:
-   sys.stdout.write('%s\t%d\n' %('I', 1))

@@ -4,35 +4,49 @@ import sys
 
 # Maximum number of iterations.
 MAX_ITER = 50
-
 # Number of top nodes to be computed.
 NUM_SHOW = 20
 # Number of nodes checked for convergence.
 N = max(50, NUM_SHOW)
 
-# The lines for "FinalRank".
-final_ranks = []
-
-# The pre-rank of the previous node, for checking stopping criterion.
-last_pre_rank = None
-
-# The input lines (containing node info) for the next iteration.
-lines = []
+first_iter = True
 stop = True
 
+# Number of iterations.
+num_iter = 1
+# Number of nodes.
+num_nodes = 0
+
+# The lines for "FinalRank".
+final_ranks = []
+# The pre-rank of the previous node, for checking stopping criterion.
+last_pre_rank = None
+# The input lines (containing node info) for the next iteration.
+lines = []
 # count is the number of lines in final_ranks.
 count = 0
 
 # Read the iteration line. It is the first line since only it has key 0.
 line = sys.stdin.readline()
-num_iter = int(line.strip().split('\t')[1])
+if (line[0] == '0'):
+   first_iter = False
+   num_iter = int(line.strip().split('\t')[1])
+   # Read the number of nodes line. It is the second line since only it has key 1,
+   # and there are no lines with key between 0 and 1.
+   next_line = sys.stdin.readline()
+   num_nodes = int(next_line.strip().split('\t')[1])
 
 # We first process the top N nodes.
-for i in xrange(N):
-    line = sys.stdin.readline()
+for i in xrange(N): 
+    # Use the line read above if it wasn't the iteration line.
+    if not (first_iter and i == 0):
+        line = sys.stdin.readline()
     if not line:
         break
     
+    if (first_iter):
+        num_nodes += 1
+
     # data format: nodeId-rank-N-prerank-neighbor1-neighbor2-...
     data = (line.strip().split('\t')[1]).split('-')
     nodeID = data[0]
@@ -77,16 +91,16 @@ if stop:
             break
 else:
     # Otherwise, read in all inputs and output back the corresponding format.
-  
-    # First add iteration line. 
-    sys.stdout.write('%s\t%d\n' %('I', num_iter))
-  
     for line in lines:
         sys.stdout.write(line)
+
     while True:
         line = sys.stdin.readline()
         if not line:
             break
+
+        if (first_iter):
+            num_nodes += 1     
 
         data = (line.strip().split('\t')[1]).split('-')
         nodeID = data[0]
@@ -99,3 +113,6 @@ else:
             line += ',' + ','.join(neighbors)
         line += '\n'
         sys.stdout.write(line)
+
+    sys.stdout.write('%s\t%d\n' %('C', num_nodes))
+    sys.stdout.write('%s\t%d\n' %('I', num_iter + 1))

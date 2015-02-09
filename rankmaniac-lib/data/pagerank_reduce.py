@@ -21,6 +21,11 @@ while True:
         # Format: 0\tn
         n = int(line.strip().split('\t')[1])
         sys.stdout.write('%6.15f\t%s\n' %(0, n))
+    # Counter line: C\tm.
+    elif line[0] == 'C':
+        # Format: 1\m
+        m = int(line.strip().split('\t')[1])
+        sys.stdout.write('%6.15f\t%s\n' %(1, m))
     else:
         nodeID, data = line.strip().split('\t')
 
