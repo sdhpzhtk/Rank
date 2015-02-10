@@ -6,8 +6,7 @@ DAMP = .85
 # Used for key sorting. C > maximum number of nodes in input.
 C = 999999.0
 
-# Rank threshold. Nodes with ranks below this threshold are eliminated.
-rank_thres = 0.1
+info = None
 
 rank = 0.0
 cur_node = None
@@ -33,12 +32,13 @@ while True:
             cur_node = nodeID
         if cur_node != nodeID:
             rank = rank * DAMP + 1 - DAMP
-
-            if rank >= rank_thres:
+            # info is None for deleted/frozen nodes.
+            if info:
                 # Here, info is N-prerank-neigbor1-neighbor2-....
                 sys.stdout.write('%6.15f\t%s-%6.15f-%s\n' %(C - rank, cur_node, rank, info))
             rank = 0.0
             cur_node = nodeID
+            info = None
 
         # data can be of two forms:
         # 1) starts with N, then it is the info of pre-rank and neighbors.
@@ -50,5 +50,5 @@ while True:
 
 # Process the last node.
 rank = rank * DAMP + 1 - DAMP
-if rank >= rank_thres:
+if info:
     sys.stdout.write('%6.15f\t%s-%6.15f-%s\n' %(C - rank, cur_node, rank, info))

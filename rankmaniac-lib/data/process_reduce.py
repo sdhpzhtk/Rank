@@ -26,6 +26,18 @@ lines = []
 # count is the number of lines in final_ranks.
 count = 0
 
+#def num_preserve(num_nodes, num_iter):
+#    """Determines number of nodes to preserve for next iteration.
+#
+#    Every fifth iteration, a certain number of low ranking nodes are deleted
+#    (because of 80-20 principle). The deletion phases remove an increasing
+#    number of nodes over repetitions as our confidence increases.
+#
+#    Every fifth iteration i, we keep N - 0.05(1.1^(i - 1))*N nodes. After 
+#    50 iterations, we will have deleted 80% of all nodes."""
+#
+#    return int(num_nodes - num_nodes * .5 * (1.1 ** int(num_iter / 14) - 1)) 
+
 # Read the iteration line. It is the first line since only it has key 0.
 line = sys.stdin.readline()
 if (line[0] == '0'):
@@ -83,6 +95,7 @@ for i in xrange(N):
 if stop:
     # If we have reached the stopping criteria, then print out results
     # and consume all inputs.
+
     for line in final_ranks:
         sys.stdout.write(line)
     while True:
@@ -91,28 +104,41 @@ if stop:
             break
 else:
     # Otherwise, read in all inputs and output back the corresponding format.
+    
+#    num_preserved = num_preserve(num_nodes, num_iter)
+#    num_printed = 0 
+
     for line in lines:
         sys.stdout.write(line)
+#        num_printed += 1
+#        if (num_printed == num_preserved and not first_iter):
+#           break
+
+#    with open('out.txt', 'a') as fout:
+#	fout.write('%d\t%d\n' %(num_printed, num_preserved))
 
     while True:
         line = sys.stdin.readline()
         if not line:
             break
-
-        if (first_iter):
-            num_nodes += 1     
-
-        data = (line.strip().split('\t')[1]).split('-')
-        nodeID = data[0]
-        rank = float(data[1])
-        pre_rank = float(data[3])
-        neighbors = data[4:]
         
-        line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
-        if neighbors:
-            line += ',' + ','.join(neighbors)
-        line += '\n'
-        sys.stdout.write(line)
+#        if (num_printed < num_preserved or first_iter):
+        if True:
+            if (first_iter):
+                num_nodes += 1
+
+            data = (line.strip().split('\t')[1]).split('-')
+            nodeID = data[0]
+            rank = float(data[1])
+            pre_rank = float(data[3])
+            neighbors = data[4:]
+        
+            line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
+            if neighbors:
+                line += ',' + ','.join(neighbors)
+            line += '\n'
+            sys.stdout.write(line)
+#            num_printed += 1
 
     sys.stdout.write('%s\t%d\n' %('C', num_nodes))
     sys.stdout.write('%s\t%d\n' %('I', num_iter + 1))
