@@ -47,9 +47,29 @@ if (line[0] == '0'):
    # and there are no lines with key between 0 and 1.
    next_line = sys.stdin.readline()
    num_nodes = int(next_line.strip().split('\t')[1])
+   
+#########################################
+# Process the contributions of converged pages.
+contributions = {}
+while True:
+   line = sys.stdin.readline()
+   if line[0] != '2':
+      break
+   
+   # data format: 2\tPageId\tContribution
+   data = line.strip().split('\t')
+   pageID = data[1]
+   contribution = float(data[2])
+   
+   if pageID in contributions:
+      contributions[pageID] += contribution
+   else:
+      contributions[pageID] = contribution
+
+#########################################
 
 # We first process the top N nodes.
-for i in xrange(N): 
+for i in xrange(N):
     # Use the line read above if it wasn't the iteration line.
     if not (first_iter and i == 0):
         line = sys.stdin.readline()
