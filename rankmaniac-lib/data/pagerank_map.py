@@ -27,6 +27,7 @@ def decode(line):
             deg = int(info[3][4:])
             neighbors = info[4:]
         else:
+            # Use given degree since fixed neighbors are not in adjacency list.
             neighbors = info[3:]
             deg = len(neighbors)
         return (1, nodeId, cur_rank, prev_rank, neighbors, deg)
