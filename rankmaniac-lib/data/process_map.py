@@ -2,6 +2,16 @@
 
 import sys
 
+def decode(line):
+    pass
+
+def encode():
+    pass
+
+def freeze_node(nodeID, rank, neighbors):
+    """Freezes the given node and allocates fixed contributions to neighbors."""
+    pass
+
 #############################################
 
 # Feed forward first two lines specifying number of iterations and nodes.

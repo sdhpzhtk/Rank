@@ -15,14 +15,20 @@ def decode(line):
         # Format: I\tn or C\tm or F\tNodeId: PageRank
         return (0, None, None, None, None, None)
     else:
-        # Format: NodeID:node_id\tcur_rank,prev_rank,C,neigbor1,neighbor2....
+        # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
         data = line.strip().split('\t')
-        nodeID = int(data[0][len('NodeId:'):])       
+        nodeID = int(data[0][7:])       
         info = data[1].split(',')        
         cur_rank = float(info[0])
         prev_rank = float(info[1])
-        neighbors = info[3:]
-        deg = len(neighbors)
+        
+        if info[2][0:2] == 'C:':
+            # Fixed contributions and degree are missing in first iteration.
+            deg = int(info[3][4:])
+            neighbors = info[4:]
+        else:
+            neighbors = info[3:]
+            deg = len(neighbors)
         return (1, nodeId, cur_rank, prev_rank, neighbors, deg)
         
 def encode(nodeId, prob_contribution):
