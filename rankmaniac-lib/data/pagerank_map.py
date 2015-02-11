@@ -2,33 +2,39 @@
 
 import sys
 
-for line in sys.stdin:
-    # Only process lines of the form "NodeId:\t....".
-    if line[0] == 'N':
+def decode(line):
+    """Reads line from stdin and returns appropriate values.
+    
+    Returns (op, nodeID, cur_rank, prev_rank, neighbors, deg), where op = 0
+    (False) if line was sent to stdout."""
+    
+    # Save information for reduce and process steps.
+    sys.stdout.write(line)
+    
+    if line[0] == 'I' or line[0] == 'C' or line[0] == 'F':
+        # Format: I\tn or C\tm or F\tNodeId: PageRank
+        return (0, None, None, None, None, None)
+    else:
+        # Format: NodeID:node_id\tcur_rank,prev_rank,C,neigbor1,neighbor2....
         data = line.strip().split('\t')
-        nodeID = data[0][len('NodeId:'):]
-
-        data = data[1].split(',')
-        cur_rank = data[0]
-        neighbors = data[2:]
+        nodeID = int(data[0][len('NodeId:'):])       
+        info = data[1].split(',')        
+        cur_rank = float(info[0])
+        prev_rank = float(info[1])
+        neighbors = info[3:]
         deg = len(neighbors)
-
-        # First transmit the node info, save cur_rank for next iteration.
-        # Format: nodeID\tN-cur_rank-neigbor1-neighbor2-....
-        sys.stdout.write('%s\tN-%s\n' %(nodeID, '-'.join([cur_rank] + neighbors)))
+        return (1, nodeId, cur_rank, prev_rank, neighbors, deg)
         
-        if deg == 0:
-            sys.stdout.write('%s\t%s\n' %(nodeID, cur_rank))
-        else:
-            cur_rank = float(cur_rank)
-            for j in neighbors:
-                sys.stdout.write('%s\t%6.15f\n' %(j, cur_rank/deg))
-    elif line[0] == 'I':
-       # Format: I\tn
-       n = int(line.strip().split('\t')[1])
-       sys.stdout.write('%s\t%d\n' %('I', n))
-    elif line[0] == 'C':
-       # Format: C\tm
-       m = int(line.strip().split('\t')[1])
-       sys.stdout.write('%s\t%d\n' %('C', m))
+def encode(nodeId, prob_contribution):
+    # Format: NodeID:node_id\tprob_contribution\n
+    sys.stdout.write('NodeID:%s\t%s\n' %(nodeID, prob_contribution))
 
+for line in sys.stdin:
+    (op, nodeID, cur_rank, prev_rank, neighbors, deg) = decode(line)
+    
+    if op:
+        if deg == 0:
+            encode(nodeID, cur_rank)
+        else:
+            for j in neighbors:
+                encode(j, cur_rank / deg)
