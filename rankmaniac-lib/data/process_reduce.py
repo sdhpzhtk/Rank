@@ -11,13 +11,13 @@ N = 25
 
 
 def is_frozen(line):
-   """Returns true if the given page is frozen."""
-   data = line.strip().split('\t')
+    """Returns true if the given page is frozen."""
+    data = line.strip().split('\t')
    
-   if data[1][0] == 'F':
-      return True
-   else:
-      return False
+    if data[1][0] == 'F':
+       return True
+    else:
+       return False
    
 def encode(finished, line):
     """Print out final results or feed to next iteration."""
@@ -38,7 +38,7 @@ def encode(finished, line):
         if fixed:
             sys.stdout.write('NodeID:%s\tF,%6.15f\n' %(nodeID, rank))
         else:
-            sys.stdout.write('NodeID:%s\t%s' %(nodeID, ','.join(info[1:]))            
+            sys.stdout.write('NodeID:%s\t%s' %(nodeID, ','.join(info[1:])))            
 
 first_iter = True
 
@@ -48,8 +48,8 @@ num_iter = 1
 # Read the iteration line. It is the first line since only it has key 0.
 line = sys.stdin.readline()
 if (line[0] == '0'):
-   first_iter = False
-   num_iter = int(line.strip().split('\t')[1])
+    first_iter = False
+    num_iter = int(line.strip().split('\t')[1])
 
 top_N = []
 top_N_all_fixed = True

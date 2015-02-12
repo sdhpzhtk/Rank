@@ -24,15 +24,15 @@ def decode(line):
         elif len(info) == 1:
             # Format: NodeID:node_id\tprob_contribution
             # Op = 1
-            prob_contribution = float(info)
-            return (2, nodeID, prob_contribution, None, None, None)
+            prob_contribution = float(info[0])
+            return (1, nodeID, prob_contribution, None, None, None)
         
         elif len(info) == 3:
             # Format: NodeID:node_id\tF,fixed_node_id,fixed_contribution
             # Op = 2
             fixed_node_id = info[1]
             fixed_cont = float(info[2])
-            return (3, nodeID, fixed_node_id, fixed_cont, None, None)
+            return (2, nodeID, fixed_node_id, fixed_cont, None, None)
         
         else:
             # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
@@ -40,9 +40,9 @@ def decode(line):
             cur_rank = float(info[0])
             prev_rank = float(info[1])
             fixed_cont = float(info[2][2:])
-            deg = int(info[3][4:])
+            deg = int(float(info[3][4:]))
             neighbors = info[4:]
-            return (4, nodeId, cur_rank, fixed_cont, deg, neighbors)
+            return (3, nodeID, cur_rank, fixed_cont, deg, neighbors)
 
 def encode(nodeID, rank, prev_rank, fixed_cont, deg, neighbors):
     """Feed new PageRanks to processing."""
@@ -52,8 +52,14 @@ def encode(nodeID, rank, prev_rank, fixed_cont, deg, neighbors):
         %(nodeID, rank, prev_rank, fixed_cont, deg, ','.join(neighbors)))
 
 cur_node = None
+rank = 0.0
+prev_rank = 0.0
+fixed_cont = 0.0
+deg = 0
+neighbors = None
+frozen_neighbors = []   
 for line in sys.stdin:    
-    (op, nodeId, field1, field2, field3, field4) = decode(line)
+    (op, nodeID, field1, field2, field3, field4) = decode(line)
     
     if op == 0:
         continue
@@ -61,11 +67,6 @@ for line in sys.stdin:
     if cur_node is None:
         # First iteration.
         cur_node = nodeID
-        rank = 0.0
-        prev_rank = 0.0
-        deg = 0
-        neighbors = None
-        frozen_neighbors = []        
 
     elif cur_node != nodeID:
         if neighbors is not None:
@@ -79,6 +80,7 @@ for line in sys.stdin:
         # Reset parameters.
         rank = 0.0
         prev_rank = 0.0
+        fixed_cont = 0.0
         deg = 0
         neighbors = None
         frozen_neighbors = []

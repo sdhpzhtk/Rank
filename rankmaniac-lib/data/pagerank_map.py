@@ -34,7 +34,7 @@ def allocate_prob(frozen, nodeID, rank, deg, neighbors):
                                      %(j, prob_contribution))
         else:
             # Format: NodeID:node_id\tprob_contribution\n
-            sys.stdout.write('NodeID:%s\t%6.15f\n' %(nodeID, prob_contribution))
+            sys.stdout.write('NodeID:%s\t%6.15f\n' %(nodeID, rank))
 
 for line in sys.stdin:
     """Reads lines from stdin and returns appropriate values.
@@ -61,18 +61,18 @@ for line in sys.stdin:
         cur_rank = float(info[0])
         prev_rank = float(info[1])              
         
-        if info[2][0:2] == 'C:':
+        if len(info) > 2 and info[2][0] == 'C':
             deg = info[3][4:]
             neighbors = info[4:]
         else:
             # Fixed contributions and degree are missing in first iteration.
-            neighbors = info[3:]
+            neighbors = info[2:]
             deg = len(neighbors)
             fixed_cont = 0.0
             
             # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
-            line = 'NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s'
-                %(nodeID, cur_rank, prev_rank, fixed_cont, deg, ','.join(neighbors))
+            line = 'NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s' \
+                   %(nodeID, cur_rank, prev_rank, fixed_cont, deg, ','.join(neighbors))
             
         if handle_frozen(nodeID, cur_rank, prev_rank, deg, neighbors):
             continue
