@@ -2,7 +2,26 @@
 
 import sys
 
+# Used for key sorting. C > maximum number of nodes in input.
+C = 999999.0
+
 def decode(line):
+    if line[0] == 'I':
+        # Iteration line. Format: 0\tn so process_map.py gets iter_num first.
+        n = int(line.strip().split('\t')[1])
+        sys.stdout.write('%6.15f\t%s\n' %(0, n))
+        return (0, None, None, None, None, None)
+        
+    elif line[0] == 'C':
+        # Counter line. Format: 1\tm so process_map.py gets num_nodes second.
+        m = int(line.strip().split('\t')[1])
+        sys.stdout.write('%6.15f\t%s\n' %(1, m))
+        return (0, None, None, None, None, None)
+    
+    elif line[0] == 'F':
+        # Pass frozen nodes for processing in process_reduce.py.
+        sys.stdout.write(line)
+        return (0, None, None, None, None, None)    
     pass
 
 def encode():

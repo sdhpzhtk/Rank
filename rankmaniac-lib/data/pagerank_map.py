@@ -23,11 +23,10 @@ def decode(line):
         prev_rank = float(info[1])
         
         if info[2][0:2] == 'C:':
-            # Fixed contributions and degree are missing in first iteration.
             deg = int(info[3][4:])
             neighbors = info[4:]
         else:
-            # Use given degree since fixed neighbors are not in adjacency list.
+            # Fixed contributions and degree are missing in first iteration.
             neighbors = info[3:]
             deg = len(neighbors)
         return (1, nodeId, cur_rank, prev_rank, neighbors, deg)

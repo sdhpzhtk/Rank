@@ -3,59 +3,59 @@
 import sys
 
 DAMP = .85
-# Used for key sorting. C > maximum number of nodes in input.
-C = 999999.0
 
 def decode(line):
     """ """
-    if line[0] == 'I':
-        # Iteration line. Format: 0\tn so process_map.py gets iter_num first.
-        n = int(line.strip().split('\t')[1])
-        sys.stdout.write('%6.15f\t%s\n' %(0, n))
-        return (0, None, None, None)
-        
-    elif line[0] == 'C':
-        # Counter line. Format: 1\tm so process_map.py gets num_nodes second.
-        m = int(line.strip().split('\t')[1])
-        sys.stdout.write('%6.15f\t%s\n' %(1, m))
-        return (0, None, None, None)
-    
-    elif line[0] == 'F':
-        # Pass frozen nodes for processing in process_reduce.py.
+    if line[0] == 'I' or line[0] == 'C' or line[0] == 'F':
+        # Format: I\tn or C\tm or F\tNodeId: PageRank
         sys.stdout.write(line)
-        return (0, None, None, None)
-    
+        return (0, None, None, None, None, None)    
     else:
         data = line.strip().split('\t')       
         info = data[1].split(',')
         
         if len(info) == 2:
-            # Format: NodeID:node_id\tcur_rank,prev_rank,C,neigbor1,neighbor2....
-            nodeID = int(data[0][len('NodeId:'):])
-            fixed_cont = float(info[2])
-            neighbors = info[3:]
-            deg = len(neighbors)
-            return (1, nodeId, fixed_cont, info)            
+            # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
+            nodeID = int(data[0][7:])      
+            cur_rank = float(info[0])
+            prev_rank = float(info[1])
+            
+            if info[2][0:2] == 'C:':
+                fixed_cont = float(info[2][2:])
+                deg = int(info[3][4:])
+                neighbors = info[4:]
+            else:
+                # Fixed contributions and degree are missing in first iteration.
+                fixed_cont = 0.0
+                neighbors = info[2:]
+                deg = len(neighbors)
+
+            return (1, nodeId, cur_rank, fixed_cont, deg, neighbors)            
         
         elif len(info) == 1:
-            # Format: NodeID:node_id!\tprob_contribution
+            # Format: NodeID:node_id\tprob_contribution
             nodeID = int(data[0][len('NodeId:'):])
             prob_contribution = float(info)
-            return (2, nodeId, prob_contribution, None)
+            return (2, nodeId, prob_contribution, None, None, None)
 
-def encode(nodeID, rank, info):
+def encode(nodeID, rank, prev_rank, fixed_cont, deg, neighbors):
     """Feed new PageRanks to processing. C - rank sorts by PageRank."""
-    sys.stdout.write('%6.15f\t%s-%6.15f-%s\n' %(C - rank, nodeID, rank, info))
-     
-info = None    
-rank = 0.0
+    
+    # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
+    sys.stdout.write('NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s'
+        %(nodeID, rank, prev_rank, fixed_cont, deg, ','.join(neighbors)))
+
 cur_node = None
+rank = 0.0
+prev_rank = 0.0
+deg = 0
+neighbors = None
 while True:
     line = sys.stdin.readline()
     if not line:
         break
     
-    (op, nodeId, field1, field2, field3) = decode(line)
+    (op, nodeId, field1, field2, field3, field4) = decode(line)
     
     if op == 0:
         continue
@@ -67,17 +67,23 @@ while True:
     elif cur_node != nodeID:
         # New block of pages.
         rank = rank * DAMP + 1 - DAMP
-        # info is None for deleted/frozen nodes.
-        if info:
-            encode(cur_node, rank, info)
+        encode(cur_node, rank, prev_rank, fixed_cont, deg, neighbors)
+        
+        # Reset parameters.
         rank = 0.0
+        prev_rank = 0.0
+        deg = 0
+        neighbors = None
+        
         cur_node = nodeID
-        info = None
     
     if op == 1:
         # Information line. Add fixed_contribution.
-        fixed_cont = field1
-        info = field2
+        prev_rank = field1
+        fixed_cont = field2
+        deg = field3
+        neighbors = field4
+        
         rank += fixed_cont
         
     elif op == 2:
@@ -86,5 +92,4 @@ while True:
 
 # Process the last node.
 rank = rank * DAMP + 1 - DAMP
-if info:
-    encode(cur_node, rank, info)
+encode(cur_node, rank, info)
