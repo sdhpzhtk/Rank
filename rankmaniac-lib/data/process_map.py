@@ -5,67 +5,23 @@ import sys
 # Used for key sorting. C > maximum number of nodes in input.
 C = 999999.0
 
-def decode(line):
+for line in sys.stdin:
     if line[0] == 'I':
         # Iteration line. Format: 0\tn so process_map.py gets iter_num first.
-        n = int(line.strip().split('\t')[1])
+        n = line.strip().split('\t')[1]
         sys.stdout.write('%6.15f\t%s\n' %(0, n))
-        return (0, None, None, None, None, None)
-        
-    elif line[0] == 'C':
-        # Counter line. Format: 1\tm so process_map.py gets num_nodes second.
-        m = int(line.strip().split('\t')[1])
-        sys.stdout.write('%6.15f\t%s\n' %(1, m))
-        return (0, None, None, None, None, None)
     
-    elif line[0] == 'F':
-        # Pass frozen nodes for processing in process_reduce.py.
-        sys.stdout.write(line)
-        return (0, None, None, None, None, None)    
-    pass
-
-def encode():
-    pass
-
-def freeze_node(nodeID, rank, neighbors):
-    """Freezes the given node and allocates fixed contributions to neighbors."""
-    pass
-
-#############################################
-
-# Feed forward first two lines specifying number of iterations and nodes.
-sys.stdout.write(sys.stdin.readline())
-sys.stdout.write(sys.stdin.readline())
-
-# Process node information and freeze converged nodes.
-for line in sys.stdin:
-    # data format: nodeId-rank-N-prerank-neighbor1-neighbor2-...
-    data = (line.strip().split('\t')[1]).split('-')
-    nodeID = data[0]
-    rank = float(data[1])
-    # Skip data[2] which is 'N'.
-    pre_rank = float(data[3])
-    neighbors = data[4:]    
-
-    # Freeze converged nodes. Process_reduce.py will bundle up contributions of
-    # frozen node to its neighbors.
-    if (abs(rank - pre_rank)/pre_rank < .001):
-        # Capital 'C' indicates node has converged.
-        output_line = 'NodeID:%s\tC%t%6.15f' %(nodeID, rank)
-        if neighbors:
-            for page in neighbors:
-                # Start with 2 to feed before into process_reduce.py before
-                # unconverged pages.
-                sys.stdout.write('2\t%s\t%6.15f'
-                                 %(page, rank / len(neighbors)));
-    
-    # Continue iterating on pages that have not converged.
     else:
-        output_line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
-        if neighbors:
-            output_line += ',' + ','.join(neighbors)
-        output_line += '\n'
+        data = line.strip().split('\t')       
+        info = data[1].split(',')
+        nodeID = data[0][7:]
         
-    sys.stdout.write(output_line)
-
-#############################################
+        if info[0] == 'F':
+            # Frozen page format: C-rank\tF,node_id,pagerank
+            rank = float(info[1])
+            sys.stdout.write('%6.15f\tF,nodeID,rank' %(C - rank, nodeID, rank))
+        
+        else:
+            # Non-frozen page format: C-rank\tnodeId,info
+            rank = float(info[0])
+            sys.stdout.write('%6.15f\t%s,%s' %(C - rank, nodeID, data[1]))

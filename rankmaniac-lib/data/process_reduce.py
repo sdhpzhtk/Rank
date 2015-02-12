@@ -7,66 +7,53 @@ MAX_ITER = 50
 # Number of top nodes to be computed.
 NUM_SHOW = 20
 # Number of nodes checked for convergence.
-N = max(50, NUM_SHOW)
+N = 25
+
+
+def is_frozen(line):
+   """Returns true if the given page is frozen."""
+   data = line.strip().split('\t')
+   
+   if data[1][0] == 'F':
+      return True
+   else:
+      return False
+   
+def encode(finished, line):
+    """Print out final results or feed to next iteration."""
+    data = line.strip().split('\t')
+    info = data[1].split(',')
+    fixed = is_frozen(line)
+    
+    if fixed:
+        nodeID = info[1]
+        rank = float(info[2])
+    else:
+        nodeID = info[0]
+        rank = float(info[1])
+
+    if finished:
+        sys.stdout.write('FinalRank:%s\t%6.15f\n' %(rank, nodeID))
+    else:
+        if fixed:
+            sys.stdout.write('NodeID:%s\tF,%6.15f\n' %(nodeID, rank))
+        else:
+            sys.stdout.write('NodeID:%s\t%s' %(nodeID, ','.join(info[1:]))            
 
 first_iter = True
-stop = True
 
 # Number of iterations.
 num_iter = 1
-# Number of nodes.
-num_nodes = 0
-
-# The lines for "FinalRank".
-final_ranks = []
-# The pre-rank of the previous node, for checking stopping criterion.
-last_pre_rank = None
-# The input lines (containing node info) for the next iteration.
-lines = []
-# count is the number of lines in final_ranks.
-count = 0
-
-#def num_preserve(num_nodes, num_iter):
-#    """Determines number of nodes to preserve for next iteration.
-#
-#    Every fifth iteration, a certain number of low ranking nodes are deleted
-#    (because of 80-20 principle). The deletion phases remove an increasing
-#    number of nodes over repetitions as our confidence increases.
-#
-#    Every fifth iteration i, we keep N - 0.05(1.1^(i - 1))*N nodes. After 
-#    50 iterations, we will have deleted 80% of all nodes."""
-#
-#    return int(num_nodes - num_nodes * .5 * (1.1 ** int(num_iter / 14) - 1)) 
 
 # Read the iteration line. It is the first line since only it has key 0.
 line = sys.stdin.readline()
 if (line[0] == '0'):
    first_iter = False
    num_iter = int(line.strip().split('\t')[1])
-   # Read the number of nodes line. It is the second line since only it has key 1,
-   # and there are no lines with key between 0 and 1.
-   next_line = sys.stdin.readline()
-   num_nodes = int(next_line.strip().split('\t')[1])
-   
-#########################################
-# Process the contributions of converged pages.
-contributions = {}
-while True:
-   line = sys.stdin.readline()
-   if line[0] != '2':
-      break
-   
-   # data format: 2\tPageId\tContribution
-   data = line.strip().split('\t')
-   pageID = data[1]
-   contribution = float(data[2])
-   
-   if pageID in contributions:
-      contributions[pageID] += contribution
-   else:
-      contributions[pageID] = contribution
 
-#########################################
+top_N = []
+top_N_all_fixed = True
+num_fixed_pages = 0
 
 # We first process the top N nodes.
 for i in xrange(N):
@@ -75,90 +62,46 @@ for i in xrange(N):
         line = sys.stdin.readline()
     if not line:
         break
-    
-    if (first_iter):
-        num_nodes += 1
 
-    # data format: nodeId-rank-N-prerank-neighbor1-neighbor2-...
-    data = (line.strip().split('\t')[1]).split('-')
-    nodeID = data[0]
-    rank = float(data[1])
-    # Skip data[2] which is 'N'.
-    pre_rank = float(data[3])
-    neighbors = data[4:]
-
-    line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
-    if neighbors:
-        line += ',' + ','.join(neighbors)
-    line += '\n'
-
-    lines.append(line)
-
-    # Stopping criteria:
-    # 1) Relative change in rank for the node is small.
-    # 2) The relative ranking among the current N nodes has not changed.
-    if (num_iter < MAX_ITER) and \
-       ((abs(rank - pre_rank)/pre_rank > .001) or \
-        (last_pre_rank is not None and last_pre_rank < pre_rank)):
-        stop = False
+    top_N.append(line)
+    if is_frozen(line):
+        num_fixed_pages += 1
+    else:
+        top_N_all_fixed = False
         break
 
-    last_pre_rank = pre_rank
-
-    if count < NUM_SHOW:
-        count += 1
-        final_ranks.append('FinalRank:%f\t%s\n' %(rank, nodeID))
-
-    if count == NUM_SHOW and num_iter == MAX_ITER:
-        break
-
-if stop:
-    # If we have reached the stopping criteria, then print out results
-    # and consume all inputs.
-
-    for line in final_ranks:
-        sys.stdout.write(line)
-    while True:
+if num_fixed_pages == N or num_iter == MAX_ITER:
+    # Print top 20 results and consume all inputs.
+   
+    num_printed = 0
+    for line in top_N:
+        # First print up to NUM_SHOW pages from top_N.
+        encode(True, line)
+        num_printed += 1
+        
+        if num_printed == NUM_SHOW:
+           break
+        
+    for i in range(num_printed, NUM_SHOW):
+        # Print exactly NUM_SHOW results.
         line = sys.stdin.readline()
-        if not line:
-            break
+        encode(True, line)
+
+    for line in sys.stdin:
+        # Exhaust remaining lines.
+        continue
 else:
-    # Otherwise, read in all inputs and output back the corresponding format.
-    
-#    num_preserved = num_preserve(num_nodes, num_iter)
-#    num_printed = 0 
-
-    for line in lines:
-        sys.stdout.write(line)
-#        num_printed += 1
-#        if (num_printed == num_preserved and not first_iter):
-#           break
-
-#    with open('out.txt', 'a') as fout:
-#	fout.write('%d\t%d\n' %(num_printed, num_preserved))
-
-    while True:
-        line = sys.stdin.readline()
-        if not line:
-            break
+    for line in top_N:
+         encode(False, line)
         
-#        if (num_printed < num_preserved or first_iter):
-        if True:
-            if (first_iter):
-                num_nodes += 1
-
-            data = (line.strip().split('\t')[1]).split('-')
-            nodeID = data[0]
-            rank = float(data[1])
-            pre_rank = float(data[3])
-            neighbors = data[4:]
+    for line in sys.stdin:
+        # Exhaust remaining lines.         
+        fixed = is_frozen(line)
         
-            line = 'NodeID:%s\t%6.15f,%6.15f' %(nodeID, rank, pre_rank)
-            if neighbors:
-                line += ',' + ','.join(neighbors)
-            line += '\n'
-            sys.stdout.write(line)
-#            num_printed += 1
+        if fixed and num_fixed_pages < N:
+            encode(False, line)
+            num_fixed_pages += 1
+        elif not fixed:
+            encode(False, line)
 
-    sys.stdout.write('%s\t%d\n' %('C', num_nodes))
     sys.stdout.write('%s\t%d\n' %('I', num_iter + 1))
