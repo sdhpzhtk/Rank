@@ -48,7 +48,7 @@ def encode(nodeID, rank, prev_rank, fixed_cont, deg, neighbors):
     """Feed new PageRanks to processing."""
     
     # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
-    sys.stdout.write('NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s'
+    sys.stdout.write('NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s\n'
         %(nodeID, rank, prev_rank, fixed_cont, deg, ','.join(neighbors)))
 
 cur_node = None
@@ -106,9 +106,10 @@ for line in sys.stdin:
         deg = field3
         neighbors = field4
 
-# Process last node.
-rank += fixed_cont
-rank = rank * DAMP + 1 - DAMP
-# Remove frozen pages from adjacency list.
-neighbors = list(set(neighbors).difference(set(frozen_neighbors)))
-encode(cur_node, rank, prev_rank, fixed_cont, deg, neighbors)
+if neighbors is not None:
+    # Process last node.
+    rank += fixed_cont
+    rank = rank * DAMP + 1 - DAMP
+    # Remove frozen pages from adjacency list.
+    neighbors = list(set(neighbors).difference(set(frozen_neighbors)))
+    encode(cur_node, rank, prev_rank, fixed_cont, deg, neighbors)

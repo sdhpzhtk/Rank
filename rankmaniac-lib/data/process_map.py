@@ -19,9 +19,9 @@ for line in sys.stdin:
         if info[0] == 'F':
             # Frozen page format: C-rank\tF,node_id,pagerank
             rank = float(info[1])
-            sys.stdout.write('%6.15f\tF,nodeID,rank' %(C - rank, nodeID, rank))
+            sys.stdout.write('%6.15f\tF,%s,%6.15f\n' %(C - rank, nodeID, rank))
         
         else:
             # Non-frozen page format: C-rank\tnodeId,info
             rank = float(info[0])
-            sys.stdout.write('%6.15f\t%s,%s' %(C - rank, nodeID, data[1]))
+            sys.stdout.write('%6.15f\t%s,%s\n' %(C - rank, nodeID, data[1]))

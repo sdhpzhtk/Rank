@@ -33,12 +33,12 @@ def encode(finished, line):
         rank = float(info[1])
 
     if finished:
-        sys.stdout.write('FinalRank:%s\t%6.15f\n' %(rank, nodeID))
+        sys.stdout.write('FinalRank:%6.15f\t%s\n' %(rank, nodeID))
     else:
         if fixed:
             sys.stdout.write('NodeID:%s\tF,%6.15f\n' %(nodeID, rank))
         else:
-            sys.stdout.write('NodeID:%s\t%s' %(nodeID, ','.join(info[1:])))            
+            sys.stdout.write('NodeID:%s\t%s\n' %(nodeID, ','.join(info[1:])))            
 
 first_iter = True
 

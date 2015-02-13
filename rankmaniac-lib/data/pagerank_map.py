@@ -6,7 +6,7 @@ def handle_frozen(nodeID, cur_rank, prev_rank, deg, neighbors):
     """Checks of given page has converged. If so, freezes the given node and
     allocates fixed contributions to neighbors."""  
     
-    if prev_rank != 0.0 and (abs(cur_rank - pre_rank)/pre_rank < .001):
+    if prev_rank != 0.0 and (abs(cur_rank - prev_rank)/prev_rank < .0005):
         # Format: NodeID:node_id\tF,pagerank
         sys.stdout.write('NodeID:%s\tF,%6.15f\n' %(nodeID, cur_rank))
         
@@ -62,7 +62,7 @@ for line in sys.stdin:
         prev_rank = float(info[1])              
         
         if len(info) > 2 and info[2][0] == 'C':
-            deg = info[3][4:]
+            deg = int(float(info[3][4:]))
             neighbors = info[4:]
         else:
             # Fixed contributions and degree are missing in first iteration.
@@ -71,7 +71,7 @@ for line in sys.stdin:
             fixed_cont = 0.0
             
             # Format: NodeID:node_id\tcur_rank,prev_rank,C:c,Deg:d,neigbor1,...
-            line = 'NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s' \
+            line = 'NodeID:%s\t%6.15f,%6.15f,C:%6.15f,Deg:%6.15f,%s\n' \
                    %(nodeID, cur_rank, prev_rank, fixed_cont, deg, ','.join(neighbors))
             
         if handle_frozen(nodeID, cur_rank, prev_rank, deg, neighbors):
